@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+build/
+dist/
+
+# bioidea-specific
+# Run artifacts (markdown stage outputs, validation JSON, run.json) — large, regenerable
+runs/
+# SQLite DB — local state, not source of truth
+bioidea.db
+# Auto-generated Excel CMS
+bioidea_export.xlsx
+# Internal extraction sandbox
+_extract/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
