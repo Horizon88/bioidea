@@ -31,6 +31,7 @@ from lib import grounding as _grounding  # noqa: E402
 from lib import excel_export as _excel_export  # noqa: E402
 from lib import grounded_render as _grounded_render  # noqa: E402
 from lib import obsidian_sync as _obsidian_sync  # noqa: E402
+from lib import citation_agent as _citation_agent  # noqa: E402
 
 DEFAULT_EXPORT_PATH = ROOT / "bioidea_export.xlsx"
 
@@ -558,36 +559,26 @@ def cmd_ground(args):
     if out_json.exists() and not args.force:
         sys.exit(f"{out_json} exists. Use --force to overwrite.")
 
-    cmd = [
-        _harness_bin(),
-        "grounding", "cite",
-        "--question", args.question,
-        "--model", args.model,
-        "--limit", str(args.limit),
-    ]
-    if args.search:
-        cmd += ["--search", args.search]
-    elif args.passage_ids:
-        cmd += ["--passage-ids", args.passage_ids]
-    else:
-        sys.exit("--search or --passage-ids required")
-    if args.db:
-        cmd += ["--db", args.db]
-    if args.timeout:
-        cmd += ["--timeout", args.timeout]
-
-    print(f"[ground] stage {args.stage} — {args.model} — {' '.join(cmd[2:])}", file=sys.stderr)
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
-
-    raw = proc.stdout.strip() or "{}"
-    out_json.write_text(raw)
-
+    print(
+        f"[ground] stage {args.stage} — {args.model} — "
+        f"search={args.search!r} passage_ids={args.passage_ids!r}",
+        file=sys.stderr,
+    )
     try:
-        data = json.loads(raw)
-    except json.JSONDecodeError:
-        # Persist whatever we got; surface the harness's stderr.
-        sys.stderr.write(proc.stderr or "")
-        sys.exit(f"[fail] non-JSON from harness; saved raw to {out_json.relative_to(ROOT)}")
+        data = _citation_agent.cite(
+            question=args.question,
+            search_query=args.search,
+            passage_ids=args.passage_ids.split(",") if args.passage_ids else None,
+            limit=args.limit,
+            model=args.model,
+            db=args.db,
+            timeout_s=int(args.timeout) if args.timeout else 300,
+        )
+    except Exception as e:
+        out_json.write_text(json.dumps({"status": "ERROR", "detail": str(e)}, indent=2))
+        sys.exit(f"[fail] citation_agent error: {e}")
+
+    out_json.write_text(json.dumps(data, indent=2))
 
     md = _grounded_render.render(
         data, run_name=run["name"], stage=args.stage, question=args.question
@@ -611,7 +602,7 @@ def cmd_ground(args):
         except Exception as e:
             print(f"[export-warn] {e}", file=sys.stderr)
 
-    if proc.returncode != 0 or status != "PASS":
+    if status != "PASS":
         sys.exit(2)
 
 
