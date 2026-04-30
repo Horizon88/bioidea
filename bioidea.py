@@ -30,6 +30,7 @@ sys.path.insert(0, str(ROOT))
 from lib import grounding as _grounding  # noqa: E402
 from lib import excel_export as _excel_export  # noqa: E402
 from lib import grounded_render as _grounded_render  # noqa: E402
+from lib import obsidian_sync as _obsidian_sync  # noqa: E402
 
 DEFAULT_EXPORT_PATH = ROOT / "bioidea_export.xlsx"
 
@@ -614,6 +615,27 @@ def cmd_ground(args):
         sys.exit(2)
 
 
+def cmd_sync_obsidian(args):
+    """One-way push: bioidea runs → <vault>/Bioidea/. Idempotent."""
+    init_db(); migrate_db()
+    vault = Path(args.vault).expanduser()
+    if not vault.exists():
+        sys.exit(f"Vault path does not exist: {vault}")
+    if not vault.is_dir():
+        sys.exit(f"Vault path is not a directory: {vault}")
+    summary = _obsidian_sync.sync_run(
+        repo_root=ROOT,
+        db_path=DB_PATH,
+        vault=vault,
+        run_id=args.run_id,
+    )
+    print(f"[obsidian] {summary['vault_root']}")
+    print(f"  runs:     {summary['runs']}")
+    print(f"  stages:   {summary['stages']}")
+    print(f"  grounded: {summary['grounded']}")
+    print(f"  sources:  {summary['sources']}")
+
+
 def cmd_export(args):
     """Build / rebuild the Excel CMS file from current DB state."""
     init_db(); migrate_db()
@@ -732,6 +754,14 @@ def build_parser():
     ex = sub.add_parser("export", help="Rebuild the Excel CMS (bioidea_export.xlsx)")
     ex.add_argument("--out", help="Output path (default: bioidea_export.xlsx)")
     ex.set_defaults(func=cmd_export)
+
+    so = sub.add_parser("sync-obsidian",
+                        help="Push runs into an Obsidian vault as <vault>/Bioidea/...")
+    so.add_argument("run_id", nargs="?",
+                    help="Run id (or short prefix). Omit to sync ALL runs.")
+    so.add_argument("--vault", required=True,
+                    help="Path to your Obsidian vault root")
+    so.set_defaults(func=cmd_sync_obsidian)
 
     g = sub.add_parser("ground",
                        help="Run a grounded synthesis pass via the harness CitationAgent")

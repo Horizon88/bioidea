@@ -145,6 +145,44 @@ BIOIDEA_NO_EXPORT=1 python3 bioidea.py run <id>
 
 **Extractor caveats.** Verdicts are pulled by regex from the markdown outputs. Headline fields (target, code name, ask, recommendation, vote, the One Thing, all QA verdicts) extract reliably. A few fields (S1 blocker, S2 assay) are best-effort and will sometimes show table fragments — fixable via prompt convention or a structured-output JSON schema in a later iteration. See `lib/extract.py`.
 
+## Obsidian sync (CMS view in your knowledge base)
+
+Push runs into an Obsidian vault as a self-contained `Bioidea/` subfolder. One-way push, idempotent — re-running over the same vault updates files in place, never duplicates.
+
+```bash
+# All runs:
+python3 bioidea.py sync-obsidian --vault ~/Documents/MyVault
+
+# One run (id or short prefix):
+python3 bioidea.py sync-obsidian e7732b5d --vault ~/Documents/MyVault
+```
+
+**Vault layout** under `<vault>/Bioidea/`:
+
+```
+_index.md                     ← Dashboard (Dataview tables of runs, grounded outputs, sources)
+<run-name>.md                 ← Run hub: summary, links to stages, cited-source list
+<run-name>/
+  stage{N}_{main,qa}.md       ← Stage artifacts with frontmatter + backlinks to run hub
+  stage{N}_grounded.md        ← Grounded outputs (if `bioidea ground` ran)
+Sources/
+  pubmed-41591869.md          ← One per cited source, deduped across runs
+                                "Cited by" backlinks auto-generated
+```
+
+**Frontmatter is Dataview-aware** — `_index.md` ships with prebuilt queries:
+
+```dataview
+TABLE status, current_stage AS "Stage", total_cost_usd AS "$", focus_profile AS "Focus"
+FROM "Bioidea"
+WHERE type = "bioidea-run"
+SORT created_at DESC
+```
+
+Plus tables for grounded outputs (sortable by status), source citation counts, and grounding failures. Treat the vault as a real CMS over your runs.
+
+**Constraint:** the sync only writes inside `<vault>/Bioidea/`. Your other Obsidian content is untouched.
+
 ## Tuning
 
 - **Change persona or constraints** → edit `prompts/stage{N}_{phase}.md` or `prompts/focus.md`.
