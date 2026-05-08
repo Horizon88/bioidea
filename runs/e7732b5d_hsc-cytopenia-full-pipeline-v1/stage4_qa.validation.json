@@ -1,0 +1,115 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage4_qa.md",
+  "total_lines": 55,
+  "scanned_lines": 13,
+  "factual_bullet_count": 0,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 0,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 11,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "WARN",
+  "findings": [
+    {
+      "line_no": 18,
+      "line": "**Date:** 2026-04-24",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 19,
+      "line": "**Subject:** Stage 4 mutation-filtering protocol, BaEV-Rless envelope campaign",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "The filter architecture is sound. The five fast-filter heuristics are specific to the structural biology of a Class I viral fusion protein and the B-list safety net (\u00a75) is correctly designed. Four calibration gaps are identified below; none requires a protocol rewrite, but two require explicit procedural amendments before R1 execution.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 33,
+      "line": "**Item 1 \u2014 Multi-mutation interactions.** The five fast-filter heuristics are evaluated per-substitution in isolation. FoldX `BuildModel` in the slow filter operates on the full variant sequence and does capture epistatic effects on stability, but the hard-veto rules (heuristics 1, 2, 5) can kill a variant for a single substitution that would be rescued by a co-occurring stabilizing mutation elsewhere. This is the most consequential gap: a charge reversal at a semi-buried RBD position (heuristic 1) may be precisely compensated by an adjacently proposed hydrophobic packing mutation in the same variant. **Calibration needed:** add a conditional pass for multi-mutant variants where a per-substitution fast-filter veto fires \u2014 if the co-mutations in the same variant are predicted by the AI to be compensatory (i.e., the variant's composite FoldX \u0394\u0394G passes the slow-filter threshold), escalate to slow filter rather than hard-veto. Implement as a \"multi-mutant override\" flag in the variant record; do not widen the heuristic threshold globally.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 35,
+      "line": "**Item 2 \u2014 Structural dynamics / relaxation.** The slow filter runs `RepairPDB` before FoldX, which repacks side chains but does not perform backbone relaxation. Clash checks (\u00a73.2) and interface \u0394\u0394G calculations (\u00a73.4) are therefore performed on a semi-rigid structure. For mutations in flexible linker regions (VRA-VRB, ~210\u2013260) and MPER (~570\u2013600), which are engineering hot zones for this campaign, backbone rigidity will produce spurious clash rejections. **Calibration needed:** add a brief Rosetta `FastRelax` (5 cycles, coordinate-constrained backbone) before the heavy-atom distance check in \u00a73.2 and before `InterfaceAnalyzerMover` in \u00a73.4. This is standard practice; cost is approximately 10\u201320 additional GPU-minutes per variant and does not materially change throughput.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "**Item 3 \u2014 Affinity ranges.** For a lentiviral envelope, this is a transduction-efficiency target, not a cytokine agonist, so the biased-agonism framing does not apply directly. However, the question is relevant to the dual-receptor gate (\u00a74.2): the filter permits ASCT1 \u0394\u0394G_binding degradation up to +3 kcal/mol while ASCT2 is gated at +2 kcal/mol. This asymmetry is intentional and correctly documented. **No calibration required** for this item given the target class.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 39,
+      "line": "**Item 4 \u2014 Glycan modeling.** The primary structural prediction (\u00a73.1, used as input to \u00a73.2 clash checks and \u00a73.4 \u0394\u0394G_binding) is run on the unglycosylated sequence. The dedicated glycan consistency check (\u00a73.6) is only triggered for mutations within 10 \u00c5 of a predicted glycan site and uses a separate AF3 run. This means side-chain clash calculations for variants near but outside the 10 \u00c5 threshold are run without glycan context \u2014 a glycan-mediated steric effect can be missed entirely. **Calibration needed:** extend the glycan-consistency trigger from 10 \u00c5 to 15 \u00c5 C\u03b1 distance from any predicted N-glycan sequon. The incremental AF3 calls are low volume (only ~30% of SU residues fall in the expanded radius).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 41,
+      "line": "**Item 5 \u2014 \u0394\u0394G calibration vs. activity.** The FoldX \u0394\u0394G hard-reject threshold (+3 kcal/mol) is not paired with a functional-geometry or activity-prediction term. For BaEV Env, functional proxies exist in the slow filter (fusion-peptide RSA, HR1/HR2 heptad register, furin cleavage RSA), but a variant with FoldX \u0394\u0394G = +2.8 kcal/mol that passes all functional-site geometry checks is currently at risk of B-list relegation with no pathway to direct promotion. **Calibration needed:** variants in the [+2, +3] kcal/mol FoldX range that pass all five functional-site geometry checks should be auto-promoted to A-list rather than defaulting to B-list. Document as \"functional-rescue override\" in the variant record.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 43,
+      "line": "**Item 6 \u2014 False-positive measurement.** Fully addressed in \u00a75. B-list composition, measurement protocol, cost, and 15% FPR recalibration trigger are all specified. **No calibration required.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 49,
+      "line": "The existing B-list design (\u00a75) is adequate. The only amendment following item 5 above: variants promoted via \"functional-rescue override\" should be tracked as a distinct sub-cohort within the A-list so their Tier 1 hit rate can be compared to the main A-list, providing an ongoing calibration signal for the \u0394\u0394G threshold independently of the B-list.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 55,
+      "line": "Stage 5 (Lab Ops) should budget for: (a) approximately 10\u201315% additional Rosetta compute time per variant from the FastRelax amendment (item 2); (b) a modest increase in AF3 glycan-check calls from the expanded 15 \u00c5 trigger (item 4) \u2014 estimated +5\u20138% slow-filter GPU cost; (c) a \"functional-rescue override\" tracking column in the variant database schema before R1 data ingestion. No additional synthesis capacity is required beyond what the existing B-list allocation covers.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

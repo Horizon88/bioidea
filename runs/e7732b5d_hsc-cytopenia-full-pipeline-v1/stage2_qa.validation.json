@@ -1,0 +1,484 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage2_qa.md",
+  "total_lines": 169,
+  "scanned_lines": 55,
+  "factual_bullet_count": 35,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 35,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 17,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Subject:** Does the Stage 2 assay stack actually predict clinical performance in the patient populations we intend to dose? Or are we teaching EVOLVEpro to win in a petri dish?",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "The Stage 2 memo is the best assay design I have seen in an HSC-GT campaign memo in five years. It correctly forces serum-free Expi293, cryopreserved mPB, 4h single-cytokine prestim, LT-HSC gating to CD45RA\u207bCD49f\u207a, and donor-normalized n=3. It correctly excludes NSG from the AL loop. These are all real, and I will not relitigate them.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 39,
+      "line": "**But it has blind spots the author was too close to see.** The fitness function is a reporter-LV on healthy adult mPB from a Miltenyi apheresis vendor, transduced in atmospheric oxygen, with a ~700 bp BFP cassette, on HEK293T producers. **The commercial product is a 7\u20139 kb therapeutic cassette on Expi293F GMP producers, transduced into plerixafor-mobilized SCD or G-CSF-mobilized aged MDS CD34\u207a, in a hypoxic bone marrow niche post-infusion, cleared by human serum complement if we ever pivot in vivo.** Five of those six axes are unaddressed.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 41,
+      "line": "The AI will find what the AI is asked to find. If we ask it to optimize reporter-BFP transduction of healthy young mPB in 21% O\u2082, that is exactly what we will get \u2014 and there is a credible mechanistic story for why the winners underperform on the actual clinical substrate. The bridge is not optional; it is the difference between a platform and a $50M postmortem.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 61,
+      "line": "**Count of axes differing \u22651 variable without a validation bridge in the current plan: 8 of 11.** The Stage 2 memo's kill criterion (>2 mismatched variables without a bridge = NO-GO) is breached by a factor of 4.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 68,
+      "line": "**High risk.** The AL loop trains exclusively on healthy adult mPB. Aged and diseased HSCs have **3\u201310\u00d7 lower ASCT2 surface expression** (confirmed in MDS and SCD proteomics), higher CDKN2A/p16, and a shifted lipid raft composition. A variant optimized for young healthy ASCT2-high cells may rank-invert on the actual patient substrate. **The LGS=MED aged-HSC optionality is entirely unsupported by the current assay** \u2014 zero aged-donor cells enter the loop.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 71,
+      "line": "**High risk.** A 700 bp BFP cassette packages easily in any envelope, and a strong EF1\u03b1 promoter masks modest integration/expression defects. The clinical 7\u20139 kb payload reveals **payload-size-dependent envelope defects** that the screen cannot see. BaEV specifically has shown ~2\u20135\u00d7 titer loss at full clinical cassette size in published data. We could evolve variants that win on BFP and lose on \u03b2-globin.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 74,
+      "line": "**Medium-high risk.** ASCT2 is a **glutamine/nutrient transporter regulated by mTOR and hypoxia.** CD34\u207a cells cultured at 21% O\u2082 upregulate ASCT2 within hours \u2014 artificially boosting BaEV transducibility relative to the hypoxic BM niche the HSC came from (and the niche it must home back to post-infusion). Variants optimized for normoxic ASCT2-high cells may fail on the cells that actually matter in vivo. The memo does not mention oxygen tension once.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 77,
+      "line": "**Medium risk.** HEK293T is disallowed or disfavored by many GMP frameworks (SV40 large T). Scale-up will require **HEK293F / Expi293F / CAP-T** producer lines. These lines have measurably different N-glycosylation (\u03b12,6- vs. \u03b12,3-sialic acid ratios; core fucosylation). Envelope glycans drive (a) complement recognition, (b) DC-SIGN/L-SIGN off-target capture, and (c) serum half-life. A variant selected on HEK293T glycans may be **immunogenic or complement-sensitive** on the GMP line. This is a classic pre-CMC artifact \u2014 we see it every 18 months in the antibody world, and the envelope world is worse because nobody is looking.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 80,
+      "line": "**Medium risk.** SCD \u2014 our flagship beachhead indication \u2014 **cannot receive G-CSF** (vaso-occlusive crisis risk). Every SCD program uses **plerixafor-only mobilization**, which produces a more primitive, more G0-enriched, transcriptionally distinct CD34\u207a population versus G-CSF mPB. The commercial vendors who supply healthy donor mPB use G-CSF\u00b1plerixafor. We are training on the wrong mobilization agent for our highest-velocity market. Vertex and bluebird both learned this the hard way in 2018\u20132020.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 83,
+      "line": "**Medium risk.** The memo explicitly pulls NSG out of the AL loop \u2014 correct \u2014 but then runs **only top 2 variants** in NSG at 16+16 weeks. **Rank order within the top 10 Tier 2 hits is not established before platform filing.** If Tier 2 %BFP\u207a correlates with NSG repopulation at r\u22480.5 (optimistic for this class of assay), the probability that \"best Tier 2 hit\" = \"best NSG hit\" among 10 candidates is ~30%. We could file composition-of-matter on the wrong lead.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 89,
+      "line": "**Non-negotiable additions to the plan, gated at Round 3 (mid-campaign), before any platform filing or GMP transfer:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 92,
+      "line": "- **Top 10 Tier 2 variants** re-tested on three orthogonal patient substrates:",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 93,
+      "line": "  1. **Plerixafor-only mobilized SCD patient CD34\u207a** (n=3 donors, commercial vendor \u2014 HemaCare, AllCells, or Bio-IVT have SCD apheresis product).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 94,
+      "line": "  2. **MDS patient CD34\u207a** from BM aspirate (n=3 donors, age >60; focus on low-risk MDS to avoid cytogenetic confounders).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 95,
+      "line": "  3. **Aged healthy mPB CD34\u207a** (n=3 donors, age >65) \u2014 proxy for the CHIP/clonal hematopoiesis longevity axis and the LGS=MED claim.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 96,
+      "line": "- **Kill criterion:** if Spearman rank correlation between healthy-mPB fitness and aged/SCD-mPB fitness < 0.7 on top-10 variants, **the training loop is generating a biased winner.** Pause; retrain with aged-donor data weighted into the scalar.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 99,
+      "line": "- **Top 10 Tier 2 variants** re-tested with a **full-size 7.5 kb therapeutic-proxy cassette** (e.g., \u03b2-globin mini-LCR + \u03b3-globin transgene + WPRE, or a stuffer cassette matched to Lyfgenia payload dimensions).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 100,
+      "line": "- **Readout:** titer drop ratio (full-cassette / BFP-cassette) and transduction efficiency on mPB CD34\u207a.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 101,
+      "line": "- **Kill criterion:** any variant showing >3\u00d7 titer drop at full cassette size is disqualified from lead nomination regardless of BFP performance.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 104,
+      "line": "- **Top 10 variants** transduced in **3% O\u2082 hypoxia chamber** (hypoxic workstation \u2014 Baker Ruskinn or similar) with the full Tier 2 protocol otherwise unchanged.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 105,
+      "line": "- **Readout:** same LT-HSC-gated %BFP\u207a, plus ASCT2 surface density (\u03b1ASCT2 flow) as a covariate.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 106,
+      "line": "- **Kill criterion:** >2\u00d7 fold-change in rank order between 21% O\u2082 and 3% O\u2082 top-10 \u2192 add a hypoxic arm to the AL loop from R4 onward.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 109,
+      "line": "- **Top 5 variants** produced in **Expi293F suspension** alongside HEK293T adherent.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 110,
+      "line": "- **Readouts:** titer (qPCR), thermostability (same protocol), and **complement stability** (30 min incubation in 50% human serum from pooled donors, then titer on HCT116). Add a simple **mass-spec N-glycan profile** on concentrated vector from both lines.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 111,
+      "line": "- **Kill criterion:** >3\u00d7 titer drop on Expi293F, OR >50% complement inactivation, OR a glycan profile shift that matches known immunogenic motifs (terminal Gal-\u03b1-1,3-Gal, Neu5Gc) \u2192 disqualify from lead nomination.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 114,
+      "line": "- **Top 5 variants** tested at MOI 10 in Tier 2 \u00b1 **UM171 (35 nM)** \u00b1 **PGE2 (10 \u00b5M)**. These are the clinical cocktail elements our customers (Vertex, Orchard-Kyowa, Rocket) will be using.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 115,
+      "line": "- **Kill criterion:** any variant that rank-inverts in presence of UM171 is a no-ship \u2014 UM171 is the dominant stem-retention small molecule in the clinical workflow.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 118,
+      "line": "- **Top 5 Tier 2 variants** (not top 2) in NSG **secondary transplant**, 16-week primary + 16-week secondary, n=8 mice/variant per arm, multilineage chimerism as endpoint.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 119,
+      "line": "- **Kill criterion:** if rank-order between Tier 2 %BFP\u207a and NSG secondary chimerism has Spearman \u03c1 < 0.6 among the top 5, **pause platform filing** until a Tier 2.5 LTC-IC-plus-hypoxia assay is validated as an NSG surrogate.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 122,
+      "line": "- **Top 2 variants** deep-sequenced for integration site distribution on bulk transduced CD34\u207a (LAM-PCR + Illumina). Compare to VSV-G and canonical BaEV-Rless controls.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 123,
+      "line": "- **Kill criterion:** enrichment for LMO2/MDS1-EVI1/HMGA2 hotspot loci vs. VSV-G baseline \u2192 regulatory red flag, disqualify.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 129,
+      "line": "- Forcing Expi293 serum-free from R1 \u2014 correct.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 130,
+      "line": "- Rejecting p24 ELISA as the training signal \u2014 correct.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 131,
+      "line": "- n=3 biological donors, donor-normalized \u2014 correct.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 132,
+      "line": "- Cryopreserved-only, 4h single-cytokine \u2014 correct.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 133,
+      "line": "- CD45RA\u207bCD49f\u207a gate, not just CD38\u207bCD90\u207a \u2014 correct.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 134,
+      "line": "- FTO distance as binary multiplier \u2014 correct, and ties cleanly to Stage 1 QA mandate.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 142,
+      "line": "- **Bridge A (diseased/aged substrate):** +$180\u2013250K per R3 gate (SCD apheresis units are $15\u201325K each and limited supply; MDS aspirate access via Hematologic Malignancy Research Consortium or direct IRB).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 143,
+      "line": "- **Bridge B (full cassette):** +$40\u201360K (vector prep + titer runs).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 144,
+      "line": "- **Bridge C (hypoxia):** +$80K capex for workstation if not available, +$30K consumables/round.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 145,
+      "line": "- **Bridge D (GMP line + complement + glycan):** +$60K one-time.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 146,
+      "line": "- **Bridge E (UM171/PGE2):** +$20K consumables.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 147,
+      "line": "- **Bridge F (expanded NSG):** +$150\u2013200K (48 additional mice + serial transplant cost).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 148,
+      "line": "- **Bridge G (integration sites):** +$40K.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 149,
+      "line": "- **Total bridge spend:** **~$600K\u2013$800K** across the 12-month campaign, load of ~25% on top of the baseline $2\u20133M assay consumables.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 150,
+      "line": "- **Timeline impact:** R3 gate adds ~3 weeks. R5 gate adds ~6 weeks for expanded NSG. **Net: campaign extends from 12 months to ~14 months.** Acceptable.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 165,
+      "line": "Stage 2 assay design is fundamentally sound but must be amended with **Bridges A\u2013G before Round 3 data is allowed to feed the AL loop or support a platform filing.** Specifically, Bridges A, B, C, and D are **gating for lead nomination**; Bridges E, F, G are gating for platform IP filing and GMP transfer.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 167,
+      "line": "**Do not proceed to Stage 3 (blueprint) without the bridge plan codified into the assay SOP and budget.** The baseline memo optimizes a reporter for healthy young donors in normoxic plastic. The commercial product has to work on a 65-year-old MDS patient's bone marrow cells, delivering a 9 kb payload, under complement attack, on a GMP producer line nobody on the scientific team has touched yet. We will not find out which gap killed us for 18 months and $40M \u2014 unless we bridge now.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 169,
+      "line": "**Proceed to Stage 3 conditional on bridge incorporation.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

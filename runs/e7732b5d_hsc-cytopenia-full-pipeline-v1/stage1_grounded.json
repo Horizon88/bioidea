@@ -1,0 +1,144 @@
+{
+  "model": "opus",
+  "cost_usd": 0.24812825,
+  "duration_s": 59.510418625002785,
+  "tokens_in": 13,
+  "tokens_out": 5300,
+  "question": "What is the published evidence on BaEV envelope pseudotyping of lentiviral vectors for HSC gene therapy, and what receptor and host-cell biology defines its applicability and IP exposure?",
+  "sources": {
+    "cb6d178a-1059-4064-836f-db58103398f7": {
+      "source_system": "pubmed",
+      "external_id": "24951430",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24951430/",
+      "title": "Baboon envelope pseudotyped LVs outperform VSV-G-LVs for gene transfer into early-cytokine-stimulated and resting HSCs."
+    },
+    "e680a46f-849b-43e7-bb39-2d48f8a486d8": {
+      "source_system": "pubmed",
+      "external_id": "41591869",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41591869/",
+      "title": "Transduction of Quiescent Human Hematopoietic Stem and Progenitor Cells Using Lentiviral Vectors and Virus-Like Particles."
+    },
+    "59fe1150-66ae-448d-a007-d122139ef727": {
+      "source_system": "pubmed",
+      "external_id": "19152374",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19152374/",
+      "title": "Targeted transduction of CD34+ hematopoietic progenitor cells in nonpurified human mobilized peripheral blood mononuclear cells."
+    },
+    "4ec48e08-55f3-47f3-b2d1-d044ca3e88e8": {
+      "source_system": "pubmed",
+      "external_id": "23698741",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23698741/",
+      "title": "Characterization of a third generation lentiviral vector pseudotyped with Nipah virus envelope proteins for endothelial cell transduction."
+    },
+    "e9a00476-ca2d-48f7-bf32-f93433b7cde0": {
+      "source_system": "pubmed",
+      "external_id": "37990494",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37990494/",
+      "title": "Removal of innate immune barriers allows efficient transduction of quiescent human hematopoietic stem cells."
+    }
+  },
+  "status": "PASS",
+  "validator_version": "grounding-v0.1.0",
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Lentiviral vectors pseudotyped with a baboon retroviral envelope glycoprotein (BaEV-LVs) were generated at high titer and shown to be resistant to human complement.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "We generated here high-titer LVs pseudotyped with a baboon retroviral envelope glycoprotein (BaEV-LVs), resistant to human complement."
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Under mild cytokine prestimulation, a single low-dose application of BaEV-LVs achieved up to 90% transduction of human CD34+ cells.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "Under mild cytokine prestimulation to preserve the HSC characteristics, a single BaEV-LV application at a low dose, resulted in up to 90% of hCD34(+) cell transduction."
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "BaEV-LVs at low doses efficiently transduced up to 30% of quiescent human CD34+ cells, whereas high-dose VSV-G-LVs were insufficient.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "these new BaEV-LVs allowed, at low doses, efficient transduction of up to 30% of quiescent hCD34(+) cells, whereas high-dose VSV-G-LVs were insufficient"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Reconstitution of NOD/Lt-SCID/\u03b3c(-/-) (NSG) mice with BaEV-LV-transduced hCD34+ cells maintained high transduction levels across all myeloid and lymphoid lineages, including early progenitors, and this was confirmed or increased in secondary NSG recipients, suggesting BaEV-LVs efficiently transduce true HSCs.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "reconstitution of NOD/Lt-SCID/\u03b3c(-/-) (NSG) mice with BaEV-LV-transduced hCD34(+) cells maintained these high transduction levels in all myeloid and lymphoid lineages, including early progenitors. This transduction pattern was confirmed or even increased in secondary NSG recipient mice. This suggests that BaEV-LVs efficiently transduce true HSCs"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "The modified baboon endogenous retroviral glycoprotein BaEVRLess targets the neutral amino acid transporters ASCT1 and ASCT2 on HSPCs.",
+      "citations": [
+        {
+          "passage_id": "e680a46f-849b-43e7-bb39-2d48f8a486d8",
+          "passage_hash": "0bdee89bf16cee34797d8b031cfbe088240d3b3319fef1f002991c8f533de376",
+          "verbatim_quote": "we use LV vectors and eVLPs pseudotyped with the modified baboon endogenous retroviral glycoprotein BaEVRLess, which targets the neutral amino acid transporters ASCT1 and ASCT2 on HSPCs"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "BaEVRLess-pseudotyped LV vectors enable immediate transduction of freshly isolated or thawed, unstimulated HSPCs with higher gene transfer efficiencies than VSVg-pseudotyped LV vectors.",
+      "citations": [
+        {
+          "passage_id": "e680a46f-849b-43e7-bb39-2d48f8a486d8",
+          "passage_hash": "0bdee89bf16cee34797d8b031cfbe088240d3b3319fef1f002991c8f533de376",
+          "verbatim_quote": "This envelope enables immediate transduction of freshly isolated or thawed, unstimulated HSPCs with higher gene transfer efficiencies than those obtained with VSVg-pseudotyped LV vectors"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "BaEVRLess-pseudotyped LV vectors enable transplantation of transduced HSPCs within less than 24 hours of cell isolation.",
+      "citations": [
+        {
+          "passage_id": "e680a46f-849b-43e7-bb39-2d48f8a486d8",
+          "passage_hash": "0bdee89bf16cee34797d8b031cfbe088240d3b3319fef1f002991c8f533de376",
+          "verbatim_quote": "enables the transplantation of transduced HSPCs within less than 24 hr of cell isolation"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "text": "Traditional retroviral gene transfer protocols include a multiday ex vivo culture period that can negatively affect HSPC biology and is costly, motivating envelope alternatives such as BaEVRLess.",
+      "citations": [
+        {
+          "passage_id": "e680a46f-849b-43e7-bb39-2d48f8a486d8",
+          "passage_hash": "0bdee89bf16cee34797d8b031cfbe088240d3b3319fef1f002991c8f533de376",
+          "verbatim_quote": "Traditional retroviral gene transfer protocols for the genetic modification of hematopoietic stem and progenitor cells (HSPC) include a multiday ex vivo culture period, which can negatively affect the biology of the cells and is costly."
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "text": "Existing successful clinical lentiviral HSC gene therapy trials have relied on VSV-G-LVs at high doses combined with strong cytokine-cocktail stimulation to reach therapeutic transduction levels, which may compromise HSC character and motivates alternatives.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "These trials used vesicular-stomatitis-virus-G protein (VSV-G)-LVs at high doses combined with strong cytokine-cocktail stimulation to obtain therapeutically relevant transduction levels; however, they might compromise the HSC character. Summarizing all these disadvantages, alternatives to VSV-G-LVs are urgently needed."
+        }
+      ]
+    }
+  ],
+  "narrative": ""
+}

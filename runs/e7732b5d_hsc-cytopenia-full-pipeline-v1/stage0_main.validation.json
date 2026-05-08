@@ -1,0 +1,259 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage0_main.md",
+  "total_lines": 97,
+  "scanned_lines": 29,
+  "factual_bullet_count": 17,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 17,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 10,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 18,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 19,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 26,
+      "line": "**Protein:** **Baboon Endogenous Retrovirus (BaEV) Envelope Glycoprotein \u2014 Rless variant (BaEV-Rless / BaEV-TR), used as a pseudotyping envelope for third-generation HIV-1 lentiviral vectors.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 28,
+      "line": "- **Source organism / isoform:** *Papio cynocephalus* endogenous retrovirus envelope, truncated cytoplasmic tail (\"Rless\" / TR form described by Girard-Gagnepain et al., *Blood* 2014; Bernadin et al., *Mol Ther Methods Clin Dev* 2019).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 29,
+      "line": "- **UniProt / accession:** Parent BaEV Env: **Q9WJT4** (Env polyprotein, *Papio cynocephalus* endogenous retrovirus M7); the \"Rless/TR\" forms are engineered tail-truncations of this sequence. Receptors: **ASCT1 (SLC1A4)** and **ASCT2 (SLC1A5)**.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 30,
+      "line": "- **Application (HSC/cytopenia):** Lentiviral pseudotype for **ex vivo transduction of unstimulated / minimally stimulated CD34+CD38\u2212CD90+ HSCs** in autologous gene therapy for sickle cell disease (SCD), \u03b2-thalassemia, X-SCID, WAS, ADA-SCID, Fanconi anemia, and the emerging class of in vivo HSC-targeting lentiviral particles (e.g., CD117/CD90-retargeted). This is the workhorse-to-be of every HSC gene therapy program that wants to stop frying stem cells in 48 h of IL-3/SCF/TPO/FLT3L prestim.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 36,
+      "line": "I am hunting for a **BaEV envelope variant that achieves \u226550% stable, single-integration transduction of quiescent G0 CD34+CD38\u2212CD90+ HSCs at MOI \u226410 with \u22644 h of cytokine exposure**, while retaining producer-cell titers \u22651\u00d710\u2078 TU/mL post-concentration. BaEV is the best envelope we have for primitive HSCs \u2014 and it is still catastrophically broken on three axes (producer cytotoxicity, titer, and fusion kinetics in true quiescence), which is exactly the profile EVOLVEpro-class directed evolution eats for breakfast.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 42,
+      "line": "The CD34+ transduction step is the single largest cost and risk driver in autologous HSC gene therapy. Concretely:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 44,
+      "line": "- **VSV-G, the incumbent envelope**, requires 48\u201372 h of multi-cytokine prestimulation to get 30\u201360% transduction of bulk CD34+. Every 12 h of prestim measurably reduces long-term repopulating HSC (LT-HSC) engraftment in NSG and in patients \u2014 this is why bluebird's **Zynteglo (\u03b2-thal)** and **Lyfgenia (SCD)** have patients with variable VCN/engraftment tails and why dose requirements are 3\u201320\u00d710\u2076 CD34+/kg. Manufacturing COGS for Lyfgenia is reportedly north of **$1.5M/dose** at a **$3.1M list price**; a meaningful fraction is vector + transduction.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 45,
+      "line": "- **Vertex/CRISPR Casgevy (exa-cel, SCD/\u03b2-thal, $2.2M)** uses electroporation, not lenti, precisely because lenti transduction of true HSCs is unreliable \u2014 but that forced them into an ex vivo editing workflow with its own ~$2M COGS and 4\u20136 week vein-to-vein time. A BaEV that hits LT-HSC in <8 h collapses that timeline.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 46,
+      "line": "- **Orchard (now Kyowa Kirin) \u2014 Libmeldy/Lenmeldy ($4.25M)** and **bluebird Skysona** are gated on the same bottleneck. Orchard's pipeline attrition (HSC-GT for MPS-IIIA, etc.) is partly a transduction-economics problem.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 47,
+      "line": "- **Sana Biotechnology** and **Ensoma** are explicitly building **in vivo lentiviral delivery to HSCs** \u2014 Sana's fusogen platform and Ensoma's adenovirus-based Engenious \u2014 because nobody believes ex vivo HSC-GT scales. A BaEV derivative with reduced producer fusogenicity and ASCT2-directed specificity is the **in vivo lenti** play.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 48,
+      "line": "- **Editas, Beam, Prime Medicine, Graphite Bio (defunct, cautionary)** \u2014 electroporation + AAV6 HDR is the workaround for bad lenti, and HDR in quiescent HSCs is <20%. A transduction envelope that works on G0 cells pulls the entire field back to lenti semi-randomly or enables **lenti-delivered editors** (base/prime editors as cargo).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 49,
+      "line": "- **Producer cell problem:** BaEV-Rless causes severe syncytia in HEK293T producers, tanking titers to ~10\u2076\u201310\u2077 TU/mL raw vs. VSV-G's 10\u2078. This directly translates to **$500K\u2013$1M in GMP vector cost per patient** for programs that have tried BaEV (e.g., GENETHON's attempts, Bernadin 2019). Every 10\u00d7 titer improvement is a ~$300K/dose COGS saving across the industry \u2014 a ~$500M/yr line item by 2030 at projected autologous HSC-GT volumes.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 51,
+      "line": "**TAM captured by fixing this envelope:** the ex vivo HSC-GT market is on track for **$8\u201312B by 2032** (SCD + \u03b2-thal + MLD + WAS + inherited BMF + oncology CAR-HSC). In vivo HSC lenti is an additional **$5\u201315B** option if transduction works without conditioning. The envelope is the gate.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "**MED.** A best-in-class HSC-transducing envelope is a general-purpose delivery rail for **any** HSC-modifying payload, including payloads aimed at aged HSCs \u2014 e.g., delivery of TET2/DNMT3A-correcting editors into CHIP clones, or ectopic expression of rejuvenation factors (Lin28b, Ezh2 modulators, Sirt3) into aged LT-HSCs. It is not itself a rejuvenation agent, but it is the vehicle that makes aged-HSC gene therapy tractable; hence MED, not HIGH.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 74,
+      "line": "**Why >10\u00d7 headroom is real, not hopium:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 75,
+      "line": "1. BaEV-Rless is a **naturally occurring endogenous retroviral env** that has never been under selection for HEK293T producer compatibility or for human CD34+ tropism \u2014 it has been under selection in a baboon germline to be *tolerated*, not *optimal*. That is the signature of a massively under-evolved protein.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 76,
+      "line": "2. The cytoplasmic-tail truncation (the \"Rless\" fix) was a single crude engineering step and already gave ~10\u00d7 titer improvement over full-length BaEV \u2014 proof that this surface is sloppy and responsive to mutation.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 77,
+      "line": "3. The receptor-binding domain (RBD) has never been affinity-matured against human ASCT2 specifically; baboon ASCT2 differs from human at several contact residues.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 78,
+      "line": "4. The fusion peptide and SU/TM interface are known to be mutationally tolerant from RDTR and cocal/MLV/BaEV chimera literature (Girard-Gagnepain, Frecha, Levy series).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 79,
+      "line": "5. Producer cytotoxicity is a classic **dominant-negative surface area** \u2014 small numbers of mutations in the fusion loop and heptad repeats routinely detoxify viral envelopes (see HIV Env SOSIP, RSV F DS-Cav1, etc.) without ablating function.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 81,
+      "line": "A 50\u2013100\u00d7 composite improvement (titer \u00d7 quiescent-HSC transduction efficiency) is not merely plausible; it is the *expected* outcome of a properly run campaign against a protein this under-engineered.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 87,
+      "line": "1. **Cocal virus envelope glycoprotein G (Vesiculovirus cocal, UniProt Q8B0H1-ish; Trobridge/HHMI work).** Rising star for HSC lenti, better serum stability than VSV-G, similar titer. **Rejected as #1 because:** its tropism advantage over VSV-G on true quiescent HSCs is marginal (~1.5\u20132\u00d7), and VSV-G-equivalent envelopes still need prestim. Headroom on the axis we care about (G0 HSC transduction without prestim) is smaller than BaEV's. Worth a parallel campaign; not the beachhead.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 89,
+      "line": "2. **Thrombopoietin (TPO, UniProt P40225) \u2014 engineered for HSC ex vivo expansion, not platelet signaling bias.** Huge market (romiplostim/eltrombopag franchise + ex vivo HSC expansion kits). **Rejected as #1 because:** TPO biology is well-mined, UM171 + StemRegenin-1 + small-molecule cocktails (Garcia-Prat 2021, ExCellThera OM-LV01) already dominate the HSC expansion narrative, and regulatory-grade cytokine engineering has less defensible IP whitespace than a specific envelope variant. Good LGS (MED\u2013HIGH) but weaker commercial moat.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 91,
+      "line": "3. **Anti-CD117 (c-Kit) ADC payload / binder \u2014 e.g., the antibody moiety of Magenta MGTA-117 (discontinued 2023) or Jasper briquilimab (naked anti-CD117), as a non-genotoxic conditioning agent.** Massive pain point: busulfan/melphalan conditioning is the #1 reason HSC-GT doesn't scale to non-lethal indications. **Rejected as #1 because:** (a) the \"broken\" part is the linker/payload and clinical depletion depth, not a single evolvable protein with a clean fitness screen; (b) Magenta's failure suggests the problem is tumor-biology-adjacent and harder to fix with directed evolution alone; (c) Jasper's briquilimab is already showing reasonable depletion. Real, but a different kind of engineering problem.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 97,
+      "line": "**Hunt BaEV-Rless envelope.** It is the single highest-leverage \"broken\" protein in HSC cell and gene therapy: under-evolved by nature, sitting on a $10B+ TAM gate, with 3\u201330\u00d7 measured headroom on multiple orthogonal axes, and a direct path to both ex vivo COGS collapse and the in vivo HSC-GT wedge that every serious player (Sana, Ensoma, Vertex-Arbor, Beam) is now scrambling toward. Move to Stage 1.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

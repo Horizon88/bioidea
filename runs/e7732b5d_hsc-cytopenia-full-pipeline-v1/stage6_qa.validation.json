@@ -1,0 +1,214 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage6_qa.md",
+  "total_lines": 92,
+  "scanned_lines": 26,
+  "factual_bullet_count": 8,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 8,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 14,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 28,
+      "line": "**Re:** Greenlight Memo, Project QUIESCO-1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Date:** 2026-04-24",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 31,
+      "line": "I have read the memo. I have read the QA trail. I have seen this movie before \u2014 four times, actually. G\u00e9n\u00e9thon BaEV-TR. Magenta. Graphite Bio. Every envelope-engineering pitch that came through this office between 2018 and 2023. Three of the four are dead or zombie. One is a line item in Miltenyi's reagent catalog.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 39,
+      "line": "TAM is real and not crowded *at the reagent layer*. bluebird, Vertex/CRISPR, Orchard-Kyowa, Rocket, 2seventy, Beam, Editas, Sana, Ensoma \u2014 all of them have the same $400\u2013600K/dose vector+transduction line item on their COGS slide, and none of them have solved G0 transduction. The addressable B2B reagent pull-through at $8\u201312B ex vivo by 2032 + $5\u201315B in vivo optionality is not a fiction; the Casgevy 4\u20136 week vein-to-vein timeline alone is a $500M/yr line item Vertex would pay to erase.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 45,
+      "line": "Stage 5 QA verdict was `REVISE TIMELINE` and the team *did* substantively address it: +$110K bioprocess FTE, 5-week round cadence (W34 \u2192 W57 lead nomination), IBC pre-submit W0 Friday, SCD+MDS+aged cells ordered at W1 not W12, JAX NSG-SGM3 6\u201310 week lead-time corrected (not 4), $220K vivarium/CRO contingency. These are the right fixes, on the right line items.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 47,
+      "line": "My residual concern: a 5-week cadence for cloning + packaging + primary G0 CD34\u207a readout on 60 Tier 2 variants/round with 1.5 bioprocess FTEs is still tight. The first round will slip. I'm willing to price that in because the R1 kill gate (W11, 1.5\u00d7 WT on G0) is cheap to reach and the budget has bioprocess slack now that it didn't before. Not a PASS.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 51,
+      "line": "Three risks called, three concrete mitigations, each tied to a specific stage-QA correction with a line item. **Ki-67 penalty from R1 not R5** (Stage 3 QA fix), **M_FTO binary gate from R1** (Stage 4 fix), **JAX lead-time correction** (Stage 5 fix). I count zero unmitigated \"High\" risks as of this memo. The sunk-cost red flag would be if the team buried a High risk as a footnote; they didn't.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 55,
+      "line": "This is the point at which 80% of HSC pitches die on my desk, and it is the point at which QUIESCO-1 is strongest. **This is not an IND.** It is a **GMP reagent sold to people who already have INDs.** No genotox package on the reagent itself, no biodistribution (it doesn't circulate in a patient), no insertional mutagenesis IND from us \u2014 *the integration safety panel in the Stage 3 gate is a reagent-quality assertion that derisks our customers' IND, not ours.*",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "Regulatory path is reagent-master-file + drop-in substitution into customer IND amendments. 6\u201312 months, not 36. If the team can hold the B2B reagent model and resist the temptation to build their own clinical asset on top, the regulatory risk profile is closer to a Miltenyi product launch than an HSC gene therapy. **This is the test that flips my prior from No to Yes.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 61,
+      "line": "Small molecules to transduce G0 HSCs? None. The closest adjacents are cyclosporin H (CsH, IFITM3 inhibition) and prostaglandin E2 / Staurosporine / rapamycin cocktails \u2014 all are **cofactors** that boost existing envelopes by 1.5\u20133\u00d7, not replacements. Approved biologics? None. Alternative viral systems \u2014 AAV6 (electroporation-gated, payload-limited), foamy (no commercial packaging ecosystem), non-integrating lenti (wrong modality for SCD/\u03b2-thal). **There is no shortcut. Directed evolution of the envelope is the path.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 71,
+      "line": "**The regulatory profile is reagent, not drug.** A 50\u2013100\u00d7 improvement on G0 CD34\u207a transduction sold as GMP vector to every company on the Lyfgenia/Zynteglo/Casgevy/Lenmeldy list derisks *their* INDs and ships as a master-file reagent \u2014 no genotox/biodistribution/insertional mutagenesis IND package for us, no 36-month preclinical death march, no clinical-stage competitors because we are not in the clinic. Combined with (a) a real ML-loop advantage over empirical incumbents who still train on HEK293, (b) a designed FTO escape via \u226512 non-conservative SU/TM substitutions outside R-peptide, (c) a credible 30\u00d7 step-up at a W34 R5 inflection, this is the rare HSC pitch where the cell-therapy tailwinds accrue to us without the cell-therapy regulatory anchor.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 75,
+      "line": "All conditions must be signed in writing by **W0 Friday EOD (2026-04-24 COB)** or the wire does not clear Monday.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 77,
+      "line": "1. **Outside-counsel FTO opinion in hand by W4** (not \"due W4\"). The Stage 1 QA HARD-STOP \u2192 CAUTION remediation is contingent on this. No opinion, no R1 synthesis.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 78,
+      "line": "2. **B2B reagent charter locked.** No clinical asset, no co-development, no internal IND ambitions for 36 months. Founders sign a board resolution. The instant this becomes a cell-therapy company it becomes a Graphite/Magenta-shaped hole in the portfolio.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 79,
+      "line": "3. **Donor batch-matching and lot-tracking SOP** for Tier 2 readouts \u2014 same n=3\u20135 mPB donors across R1\u2192R5 where biologically feasible, with a pre-registered substitution protocol. Donor lottery is how this assay dies quietly.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 80,
+      "line": "4. **R1 kill gate is hard, not soft.** If W11 Tier 2 lead does not hit \u22651.5\u00d7 WT on donor-normalized G0 CD34\u207aCD38\u207bCD45RA\u207bCD90\u207aCD49f\u207a with Ki-67 penalty applied and M_FTO gate satisfied, the program terminates and the remaining ~$2.4M returns to the fund. No \"one more round.\" No pivot to cord blood. No HEK293 rescue run.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 81,
+      "line": "5. **R3 Bridge (W23) requires LTC-IC \u22650.6\u00d7 untransduced, VCN \u22642, clean lineage-bias CFU, AND cross-substrate \u03c1 \u22650.7 across healthy/SCD/MDS/aged.** Any one miss forces a committee review before R4 synthesis spend.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 82,
+      "line": "6. **Priority-1 provisionals filed by W8 (2026-06-22)** covering (i) Markush on SU RBD + TM fusion-peptide, (ii) ML-guided DE method against G0-HSC fitness function, (iii) producer-detoxified envelope composition. Receipt of filed provisionals to the board.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 83,
+      "line": "7. **$350K scaffold-pivot reserve pre-authorized** but ring-fenced \u2014 only releasable to an RD114-TR fallback if the G\u00e9n\u00e9thon FTO opinion comes back adverse at W4, not as a general slush fund.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 84,
+      "line": "8. **Expi293F GMP-line compatibility confirmed by R5**, not assumed. If producer titer only holds in research-grade Expi293, the reagent thesis breaks.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 88,
+      "line": "**LGS MED justifies a 12-month follow-on option, not a companion bet today.** Bridge A carrying aged (>65 y) donors at R3 costs us nothing incremental and preserves a free call on a CHIP-clone-correcting base-editor delivery asset; if the W34 R5 variant dominates on aged substrate with \u03c1 \u22650.7 to young G0, we write a follow-on term sheet at Series A for a dedicated aged-HSC gene therapy program. Do not fund the longevity asset today. Do not let the founders pitch it to the next round's lead investor as part of the QUIESCO-1 story \u2014 it dilutes the reagent narrative that is the entire reason this passes committee.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 92,
+      "line": "**Signed.** Release $2.98M on satisfaction of Conditions 1\u20138 by W0 Friday EOD. Gate hard at W11, W23, W34. I want a one-page written update after every gate, not a deck.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

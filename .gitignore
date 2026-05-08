@@ -7,14 +7,14 @@ __pycache__/
 build/
 dist/
 
-# bioidea-specific
-# Run artifacts (markdown stage outputs, validation JSON, run.json) — large, regenerable
-runs/
-# SQLite DB — local state, not source of truth
-bioidea.db
-# Auto-generated Excel CMS
-bioidea_export.xlsx
-# Internal extraction sandbox
+# bioidea state — INTENTIONALLY tracked so multi-machine workflow is clean
+# (run on one machine at a time; always git pull before, git push after)
+# - runs/         the actual stage output artifacts ($-spend live here)
+# - bioidea.db    SQLite index of runs + per-stage costs/grounding
+# - bioidea_export.xlsx   the auto-rebuilt Excel CMS
+# These are binary/large but small enough (<1MB total) and substantive
+
+# Internal extraction sandbox (regenerable, ignore)
 _extract/
 
 # Editor / OS

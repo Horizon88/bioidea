@@ -1,0 +1,430 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage0_qa.md",
+  "total_lines": 111,
+  "scanned_lines": 53,
+  "factual_bullet_count": 20,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 20,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 26,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 18,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 19,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 21,
+      "line": "**Subject:** Stage 0 Scout recommendation \u2014 BaEV-Rless envelope glycoprotein",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**ADVANCE CANDIDATE: BaEV-Rless (Baboon Endogenous Retrovirus envelope, cytoplasmic-tail-truncated form; parent UniProt Q9WJT4).**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "Conditional on the Stage 1 FTO gauntlet clearing the Lentigen/G\u00e9n\u00e9thon/MolMed patent thicket around BaEV-TR pseudotyping (flagged below). This is the right target. The Scout's thesis survives adversarial review.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 36,
+      "line": "**BaEV-Rless / BaEV-TR envelope glycoprotein** \u2014 tail-truncated *Papio cynocephalus* endogenous retrovirus M7 Env, receptor pair **ASCT1 (SLC1A4) / ASCT2 (SLC1A5)**.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 40,
+      "line": "**(1) Saturation Check \u2014 PASS.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 41,
+      "line": "Wild-type BaEV-Rless transduces quiescent CD34+CD38\u2212CD90+ HSCs at **10\u201320%** (Bernadin 2019; Girard-Gagnepain 2014). Producer titers are **5\u00d710\u2076\u20133\u00d710\u2077 TU/mL raw**, roughly 10\u201330\u00d7 below VSV-G. Producer viability at 48 h post-transfection is ~30\u201360%. None of these numbers are anywhere near saturation. A 50% G0-HSC transduction target sits cleanly in the fitness-landscape interior, not at the ceiling \u2014 which is also important for EVOLVEpro-class selection to stay informative rather than collapsing into a binary hit/miss assay.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 43,
+      "line": "**(2) Assay Check \u2014 PASS, with one mandated discipline.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 45,
+      "line": "- Producer titer by qPCR on transduced HCT116 or by p24 ELISA \u2014 CV 10\u201315%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 46,
+      "line": "- Transduction efficiency on primary CD34+CD38\u2212CD90+ by flow + reporter (GFP or BFP) \u2014 CV 8\u201312% within a donor.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 47,
+      "line": "- VCN by ddPCR on bulk or single-cell \u2014 CV <10%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 48,
+      "line": "- Producer syncytia / cytotoxicity by imaging + viability \u2014 CV 10\u201315%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 50,
+      "line": "**Red team mandate:** the \"long-term repopulating HSC\" phenotype is NOT a training-loop assay \u2014 NSG engraftment has CV 25\u201340% and 16-week readout. Train on G0 transduction + VCN in sorted CD34+CD38\u2212CD90+ as the primary fitness signal; reserve NSG serial transplant for top-N validation only. If the Scout team tries to use NSG engraftment as an inner-loop fitness function, the campaign dies. Lock this in before Stage 2.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 52,
+      "line": "**(3) Domain Check \u2014 PASS.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 55,
+      "line": "**(4) Headroom Check \u2014 PASS.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "- **Producer titer:** 10\u201330\u00d7 to reach VSV-G parity; the R-less truncation already proved a single crude edit yields ~10\u00d7 \u2014 the surface is responsive.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 58,
+      "line": "- **G0 HSC transduction:** 3\u20135\u00d7 to reach \u226550%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 59,
+      "line": "- **Producer cytopathicity:** qualitatively massive \u2014 envelope detoxification precedents (HIV Env SOSIP, RSV F DS-Cav1, MeV-H stabilization) routinely achieve it with <10 mutations.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 60,
+      "line": "- **Serum/thermostability post-concentration:** 3\u201310\u00d7 demonstrated precedent in VSV-G and cocal engineering.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 62,
+      "line": "Compounded fitness improvement ceiling (titer \u00d7 G0 efficiency \u00d7 producer viability) is comfortably in the 50\u2013100\u00d7 range. Crucially, *each axis has precedent in homologous viral envelopes*, so this is not a single high-risk bet \u2014 it is four partially-independent shots, each with literature support.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 64,
+      "line": "**(5) Competition Check \u2014 CROWDED, BUT EXPLOITABLE.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 66,
+      "line": "- **G\u00e9n\u00e9thon / Anne Galy / Els Verhoeyen (Lyon)** \u2014 the original Rless/TR patents and the ongoing academic lead. They optimize empirically, not via directed evolution.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 67,
+      "line": "- **Lentigen / Miltenyi** \u2014 GMP BaEV-TR vector manufacturing; tied up in the academic licensing chain.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 68,
+      "line": "- **Sana Biotechnology** \u2014 fusogen engineering, but their focus is HERV-W / paramyxo-derived fusogens for in vivo delivery, not BaEV optimization per se.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 70,
+      "line": "- **2seventy bio / Vertex** \u2014 known to have evaluated BaEV but have not, to our knowledge, launched a dedicated directed-evolution campaign.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 72,
+      "line": "**No disclosed well-funded program is running a deep-mutational-scan + ML-guided campaign on BaEV Env for quiescent-HSC transduction.** The closest analog is Sana's fusogen work on *different* envelopes. The whitespace is real but narrowing \u2014 Stage 1 FTO must confirm we can operate around the G\u00e9n\u00e9thon patent family on the R-less truncation itself (likely fine if we mutate SU/TM substantially, not fine if we ship only the tail truncation).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 75,
+      "line": "A BaEV-Rless variant hitting the Hunter's Thesis spec (\u226550% G0 CD34+CD38\u2212CD90+ transduction at MOI \u226410, \u22651\u00d710\u2078 TU/mL, <10% producer syncytia) unlocks, in order of commercial velocity:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 76,
+      "line": "1. **COGS collapse on autologous HSC-GT** (Lyfgenia, Zynteglo, Lenmeldy, Skysona successors) \u2014 $300K\u2013$1M/dose saved, 4\u20136 week \u2192 <1 week vein-to-vein.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 77,
+      "line": "2. **Lenti-delivered base/prime editors into quiescent HSCs** \u2014 breaking the AAV6/electroporation monopoly that Casgevy-class programs depend on.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 78,
+      "line": "3. **In vivo HSC gene therapy** via CD117/CD90-retargeted BaEV particles \u2014 the $5\u201315B optionality tier.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 79,
+      "line": "4. **Rare inherited BMF programs** (Fanconi, DBA, SDS) that are currently uneconomic under bluebird/Orchard COGS structures.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 82,
+      "line": "**MED.** Confirmed at Scout's level. The envelope is a delivery rail, not a rejuvenation agent; its longevity value is entirely derivative of what payload you ship into aged HSCs (CHIP-clone editors, Lin28b, Sirt3, etc.). Do not upgrade to HIGH \u2014 that would require a specific aged-HSC tropism hypothesis (e.g., preferential transduction of myeloid-biased aged LT-HSCs), which the Scout did not make and which is not load-bearing for the beachhead.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 89,
+      "line": "**REJECTED \u2014 Kill Criterion 4 (Headroom).** Cocal is already 60\u201380% of the way to VSV-G on titer and only marginally better on true G0 HSCs (~1.5\u20132\u00d7). The improvement ceiling on the axis we actually care about (quiescent-HSC transduction without prestim) is at most 2\u20133\u00d7, well short of the 10\u00d7 bar. Worth a parallel benchmarking arm; not the lead target.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 91,
+      "line": "**Thrombopoietin (TPO, P40225) engineered variants for HSC expansion.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 92,
+      "line": "**REJECTED \u2014 Kill Criterion 5 (Competition) + Kill Criterion 1 (partial saturation on platelet axis).** UM171, SR1, ExCellThera OM-LV01, and the Garcia-Prat/Sauvageau axis have mined the HSC-expansion small-molecule/cytokine combinatorial space deeply. The remaining headroom on HSC self-renewal from a better TPO is modest relative to cocktail-level gains, and IP whitespace on engineered cytokines is narrow and heavily litigated (Amgen/Kirin/ExCellThera). Weak moat.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 94,
+      "line": "**Anti-CD117 ADC / briquilimab-class conditioning binders.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 95,
+      "line": "**REJECTED \u2014 Kill Criterion 4 (Headroom on an evolvable axis).** Magenta MGTA-117 failed on payload/linker biology, not on binder affinity; Jasper briquilimab is already in reasonable depletion range. The \"broken\" surface is the ADC chemistry and patient-pharmacology, not a single protein with a clean directed-evolution fitness screen. Different engineering problem, wrong tool.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 101,
+      "line": "**Proceed to Stage 1: FTO Gauntlet for deep IP analysis.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 103,
+      "line": "Stage 1 must specifically resolve, before any wet-lab spend:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 104,
+      "line": "- Scope of the **G\u00e9n\u00e9thon / Verhoeyen / Cosset** BaEV-TR / R-less family (priority dates, claim breadth on the tail truncation vs. SU/TM mutations, national phase status).",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 105,
+      "line": "- Lentigen/Miltenyi GMP manufacturing licenses and whether they encumber non-clinical research use.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 106,
+      "line": "- Any Sana/2seventy/Vertex filings referencing BaEV, ASCT2-targeted pseudotypes, or CD90/CD117-retargeted envelopes post-2022.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 107,
+      "line": "- Freedom to operate on ASCT2-receptor-binding-domain mutagenesis specifically (less likely to be claimed than the tail truncation).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 109,
+      "line": "If Stage 1 returns a clean FTO window on SU/TM mutagenesis + novel producer-detoxifying mutations, proceed to Stage 2 assay design. If the G\u00e9n\u00e9thon claims read onto any R-less construct regardless of downstream mutations, the campaign must pivot to a **cocal-BaEV RBD chimera** or a **RD114-TR** backbone as the scaffold \u2014 a real but manageable pivot.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 111,
+      "line": "**Do not burn a single CD34+ donor sample until FTO is signed off.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

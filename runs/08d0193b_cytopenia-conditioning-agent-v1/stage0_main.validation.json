@@ -1,0 +1,32 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/08d0193b_cytopenia-conditioning-agent-v1/stage0_main.md",
+  "total_lines": 80,
+  "scanned_lines": 23,
+  "factual_bullet_count": 12,
+  "tagged_bullet_count": 12,
+  "untagged_bullet_count": 0,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 1,
+  "strong_tag_usage": 9,
+  "weak_tag_usage": 20,
+  "status": "WARN",
+  "findings": [
+    {
+      "line_no": 62,
+      "line": "Three orthogonal headroom axes, each with documented \u226510\u00d7 precedent in related RIPs/toxins:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {
+    "uniprot": 1,
+    "PMID": 5,
+    "company": 5,
+    "reasoning": 6,
+    "estimate": 9,
+    "clinicaltrials": 3
+  }
+}

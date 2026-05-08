@@ -1,0 +1,547 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage1_main.md",
+  "total_lines": 210,
+  "scanned_lines": 81,
+  "factual_bullet_count": 34,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 34,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 25,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Subject:** Freedom-to-Operate on directed-evolution campaign against BaEV-Rless envelope glycoprotein (parent UniProt Q9WJT4) for lentiviral pseudotyping targeted to quiescent CD34+ HSCs",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "The wild-type BaEV envelope itself is **not patentable** \u2014 it is a naturally occurring endogenous retroviral sequence, disclosed in the literature since the 1970s and again in the Girard-Gagnepain *Blood* 2014 paper (which is **prior art**, not a patent bar to our own composition). The \"Rless\" tail truncation is where the teeth are, and the controlling family is narrower than the Stage 0 QA implied. **We can design around it in the SU/TM layer, and the producer-detoxification mutations are open whitespace.** The royalty stack on the *delivered product* (lenti vector + promoter + payload + conditioning) is the bigger long-term worry than the envelope itself. Envelope cost is estimable and manageable; payload and indication-level method claims are where COGS goes to die.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 39,
+      "line": "Proceed to Stage 2 **with FTO caveats baked into the campaign design**: we will evolve SU/TM and producer-facing residues, not the tail motif, and we will file composition-of-matter on AI-designed variants **before the first GMP transfer**.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 61,
+      "line": "**The G\u00e9n\u00e9thon/Cosset/Verhoeyen BaEV-TR family is the single real threat and it is narrower than people think.** Reading the publicly disclosed claim language (WO2013/029008 and downstream continuations), the independent claims typically recite \"a lentiviral particle pseudotyped with a BaEV envelope glycoprotein wherein the cytoplasmic tail is truncated such that the R-peptide is removed.\" That is a construct-level claim on the *tail truncation* and the *pseudotyped particle*. It does **not** reach:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 62,
+      "line": "- Novel SU/TM substitutions that confer titer or cytopathicity improvements over Rless;",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 63,
+      "line": "- RBD-engineered variants with altered receptor affinity for human ASCT2;",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 66,
+      "line": "- AI-designed sequences at <80% identity to the wild-type SU \u2014 a real design-around lever if our campaign produces genuinely divergent variants.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 86,
+      "line": "**Envelope-only royalty burden, worst-case licensed: 2\u20134%.** Acceptable. Total product-level stack worst-case: 10\u201320% aggregate royalties \u2014 this is the bluebird/Vertex norm and is survivable on $2M+ sticker-price products. If we **own** the envelope outright (via filing on SU/TM + RBD variants + AI-designed composites), we eliminate the 2\u20134% envelope slice and gain a **sublicensing asset** that other HSC-GT programs will want.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 88,
+      "line": "The envelope is not where we lose to a stack. **We lose to a stack only if we try to sell a full product ourselves.** The B2B envelope-as-reagent model (per the user's strategic context: \"B2B reagent production for cell therapy\") entirely sidesteps the payload/indication stack \u2014 Lentigen, Oxford BioMedica, and Lonza have made good businesses selling vector manufacturing services without the indication royalties touching them.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 94,
+      "line": "Expiries working in our favor over the 3-year horizon (2026\u20132029):",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 96,
+      "line": "- **Third-generation lentivirus backbone patents (Naldini/Dull et al., priority 1998):** already expired in most jurisdictions 2018\u20132020. Free to use.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 97,
+      "line": "- **RD114-TR tail-truncation family (MolMed/INSERM, priority ~2005):** expiring 2025\u20132027. Opens a **fallback scaffold** if G\u00e9n\u00e9thon's BaEV-TR claims prove stickier than expected.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 98,
+      "line": "- **Early VSV-G pseudotyping claims (Burns/Friedmann, priority early 1990s):** long expired. Useful as prior art on general pseudotyping methodology.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 99,
+      "line": "- **UM171 composition-of-matter (IRIC Montr\u00e9al / ExCellThera, priority 2013):** expires ~2033 \u2014 **not** a near-term tailwind.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 100,
+      "line": "- **Briquilimab / anti-CD117 conditioning (Stanford/Jasper, priority 2014\u20132016):** expires ~2034\u20132036 \u2014 not near-term.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 102,
+      "line": "**BaEV-TR family itself (~2012\u20132013 priority): expires ~2033\u20132034.** This is not a near-term expiry play. We cannot simply wait it out \u2014 we must design around, which is the viable path given the narrow claim scope.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 108,
+      "line": "**Primary threat: G\u00e9n\u00e9thon / INSERM / ENS Lyon / CNRS (Cosset & Verhoeyen labs).** Likely exclusive or preferred commercial licensee: **Lentigen Technology (a Miltenyi Biotec company)** for GMP vector manufacturing. Patent family anchored in WO2013/029008 and its national-phase continuations.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 111,
+      "line": "- **Sana Biotechnology** \u2014 fusogen and retargeted-envelope patent filings 2019\u20132023. Not directly blocking BaEV but will congest the in vivo HSC-LV adjacent space. If we pursue scFv- or DARPin-retargeted BaEV variants, their claims on retargeting *methodology* become relevant.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 112,
+      "line": "- **2seventy bio / Vertex / CRISPR Therapeutics** \u2014 product-level method claims on SCD/\u03b2-thal ex vivo HSC-GT. Not envelope-blocking but relevant at Stage 6 commercialization.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 114,
+      "line": "- **Magenta Therapeutics IP estate (post-windown, acquired/licensed by various parties)** \u2014 anti-CD117 ADC claims. Adjacent, not blocking.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 116,
+      "line": "**Tertiary / prior-art reservoir (useful to us, not threatening):** MolMed RDTR/RD114-TR family (expiring); Cell Genesys lentiviral backbone estate (expired); original Burns/Friedmann VSV-G pseudotyping disclosures (expired).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 126,
+      "line": "**(A) SU/TM substitution \u2014 highest priority.** The G\u00e9n\u00e9thon BaEV-TR claims read on the *tail-truncated* construct. Mutations in the surface unit (SU), transmembrane (TM), heptad repeats, fusion peptide, and RBD are **not claimed** at the composition level. Our directed-evolution campaign will produce variants with 10\u201350 substitutions across these regions; any variant with substantive SU/TM engineering falls outside the G\u00e9n\u00e9thon composition-of-matter claims. Robust doctrine-of-equivalents defense because the SU/TM mutations confer *new functional properties* (producer detoxification, G0 HSC tropism, thermostability) \u2014 not mere cosmetic reshuffling.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 128,
+      "line": "**(B) Tail-region re-engineering beyond the Rless motif.** Rather than deleting the R-peptide (which reads on the claim), **substitute** the cytoplasmic tail with an engineered sequence that achieves the same titer/cytopathicity outcome via a distinct mechanism. Precedent: cocal G tail, RD114-TR tail, MLV-A tail chimeras. This takes us off the \"truncation\" verb in the claim language entirely.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 130,
+      "line": "**(C) Scaffold pivot to RD114-TR or cocal-BaEV RBD chimera.** If Stage 2 assay data indicates that only the canonical Rless tail structure works and (A)/(B) fail, we pivot to a **cocal backbone with a grafted BaEV RBD** or an **RD114-TR** backbone (patents expiring 2025\u20132027). This is the fallback the Stage 0 QA already flagged and it remains available.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 132,
+      "line": "**We do NOT ship a product containing a literal BaEV-Rless tail-truncation sequence without a license.** We evolve away from it. Our Stage 2 campaign fitness function must include a \"distance from WT Rless tail\" term to ensure the winners are legally defensible, not just functionally superior.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 139,
+      "line": "- Upfront: $500K\u2013$2M",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 140,
+      "line": "- Milestones: $5M\u2013$20M aggregated across development",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 141,
+      "line": "- Royalties: 2\u20134% net sales on products using the envelope; 1\u20132% on reagent-grade sales",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 148,
+      "line": "**Reagent-use carve-out possibility: LOW-to-FREE.** The G\u00e9n\u00e9thon family was filed with therapeutic/transduction-method claims as the core. A pure research-reagent use may already sit outside the commercial claim scope in some jurisdictions (safe harbor under 35 USC \u00a7271(e)(1) in the US; research exemption in several EU states). This is **not a long-term strategy** \u2014 it collapses the moment we supply vector for a clinical program \u2014 but it is useful for Stage 2\u20134 discovery work without licensing spend.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 151,
+      "line": "- Lentigen GMP vector supply: 3\u20135% of vector COGS or equivalent milestone structure",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 152,
+      "line": "- Oxford BioMedica / Axovia lentiviral platform licensing: 2\u20135% royalty, $1M\u2013$5M upfront",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 153,
+      "line": "- bluebird BB305 inbound licensing from Cell Genesys (historical): ~4%, now mostly expired",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 154,
+      "line": "- ExCellThera UM171 (cytokine/small molecule licensing): 3\u20137% royalty, $2M\u2013$10M upfront",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 156,
+      "line": "**Expected envelope royalty burden under our preferred (design-around + own) path: 0%.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 166,
+      "line": "**Priority 1 \u2014 Provisional, file within 60 days of Stage 2 initiation (target filing: ~2026-06-22):**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 168,
+      "line": "1. **\"Engineered retroviral envelope glycoproteins with enhanced quiescent hematopoietic stem cell transduction\"** \u2014 composition-of-matter on a defined *variant class* (Markush-style claims on substitution positions in SU RBD and TM fusion peptide), methods of producing lentiviral particles therewith, methods of transducing CD34+CD38\u2212CD90+ cells in G0. We file on **position classes** even before the directed-evolution campaign returns winners, to anchor the priority date.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 170,
+      "line": "2. **\"AI-designed viral envelope variants for cell therapy vector manufacturing\"** \u2014 a platform claim on the *method* of generating envelope variants via ML-guided directed evolution against a quiescent-HSC transduction fitness function. This is the **EVOLVEpro-platform claim** and it matters across every future envelope we touch (cocal, RD114, MLV-A, hybrid scaffolds).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 172,
+      "line": "3. **\"Producer-detoxified retroviral envelopes\"** \u2014 composition claims on envelope variants carrying substitutions that reduce syncytia formation in mammalian producer cells (HEK293T, HEK293F, Expi293) while preserving transduction competency. This reads across envelope families, not just BaEV.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 174,
+      "line": "**Priority 2 \u2014 Convert to PCT within 12 months, national phase at 30 months:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 176,
+      "line": "4. Specific lead variant composition-of-matter claims (the top 3\u20135 winners from the campaign).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 177,
+      "line": "5. Method-of-use claims for ex vivo HSC gene therapy, in vivo HSC targeting via CD117/CD90-retargeted variants, and reagent-kit embodiments.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 179,
+      "line": "**Priority 3 \u2014 Continuation strategy:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 181,
+      "line": "6. Keep continuations alive on the parent composition claims to file narrower variant claims as the campaign yields better hits through 2028\u20132030. Standard Broad-style continuation pyramid.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 182,
+      "line": "7. File defensive publications on positions/variants we do *not* intend to commercialize, to prevent competitor composition-of-matter on those positions.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 186,
+      "line": "**Target: 2026-06-22 (provisional).** This is achievable if Stage 2 initiates on or before 2026-05-22 and we move a provisional disclosure in parallel with initial assay validation. The provisional does not require enabled examples for every variant \u2014 we anchor priority with disclosure of the fitness function, the mutagenesis libraries, and at least 2\u20133 characterized exemplar variants even if modest. We then supplement in the PCT with the full campaign output.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 188,
+      "line": "**Realistic priority window: 2026-06 through 2026-12.** Any slippage past 2026-12 risks Sana or an academic group publishing on BaEV deep mutational scanning and torching our novelty.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 193,
+      "line": "- **B2B reagent revenue** \u2014 sell vector to Vertex, 2seventy, Orchard-Kyowa, Editas, Beam, any HSC-GT program. No indication risk, no royalty stack exposure, high multiple on vector manufacturing margins.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 194,
+      "line": "- **Sublicensing leverage** against G\u00e9n\u00e9thon \u2014 if our variants improve on Rless by 10\u00d7 while operating outside their claims, G\u00e9n\u00e9thon's licensees start coming to us.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 195,
+      "line": "- **Optionality on in vivo HSC-LV** \u2014 the emerging $5\u201315B category is envelope-gated; we own the gate.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 196,
+      "line": "- **Platform extensibility** \u2014 the same ML-envelope-design method applies to AAV capsid engineering, VSV-G, cocal, paramyxo fusogens, and synthetic fusogen design. One method claim, many future products.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 202,
+      "line": "**`CAUTION (License Needed)` today. **`CLEAR` by Stage 3, conditional on the following gating actions:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 204,
+      "line": "1. **Engage outside counsel for a written FTO opinion on the G\u00e9n\u00e9thon WO2013/029008 family** within 30 days. Budget: $40K\u2013$80K. Non-negotiable before GMP spend.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 205,
+      "line": "2. **File Priority 1 provisional applications on or before 2026-06-22.** Budget: $25K\u2013$50K across three provisionals. Non-negotiable to lock priority.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 206,
+      "line": "3. **Bake \"distance from WT Rless tail\" and \"SU/TM substitution count \u2265 N\" into the Stage 2 fitness function.** Legal-design constraint, not optional. A beautifully evolved variant that reads onto the G\u00e9n\u00e9thon claim is worthless to us.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 207,
+      "line": "4. **Do not engage Lentigen for GMP vector manufacturing until Stage 5.** Any pre-commercial GMP contact invites a licensing ask and weakens our negotiating posture.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 208,
+      "line": "5. **Pre-emptively cultivate an RD114-TR fallback** in parallel low-priority track (priority claims expiring 2025\u20132027, so prior-art position only improves).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 210,
+      "line": "**Proceed to Stage 2 with these guardrails.** The envelope is the right target. The IP is manageable. The moat-building opportunity is real and time-sensitive.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

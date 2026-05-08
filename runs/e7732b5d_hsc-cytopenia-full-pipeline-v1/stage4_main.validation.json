@@ -1,0 +1,916 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage4_main.md",
+  "total_lines": 368,
+  "scanned_lines": 131,
+  "factual_bullet_count": 51,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 51,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 49,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Subject:** Fast-and-slow filter stack for BaEV-Rless envelope variants before they consume Tier 1 producer runs or Tier 2 CD34\u207a apheresis product.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 35,
+      "line": "The AI will propose ~3,000 variants per round pre-triage. At a Tier 1 unit cost of ~$200/variant and Tier 2 cost of ~$1,800/variant (plus irreplaceable mPB apheresis allocation), **every chemically nonsensical variant that reaches wet-lab is a direct tax on the campaign budget and a theft of donor cells.** The objective of this filter is to reduce the AI's raw output by ~70% **without removing non-intuitive winners** \u2014 including the bulky, charge-switched, or structurally surprising variants that have historically dominated the top of EVOLVEpro-class campaigns (the T7 RNAP paper's top hit was an E\u2192K in a solvent-accessible loop, which a naive filter would have killed).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "The filter below is structured as a **two-stage sieve** (fast AI heuristics, then slow structural validation) with a **10% B-list escape hatch** so we measure our own false-positive rate every round. All thresholds are numeric, defensible, and target-specific to a Class I viral fusion protein binding a neutral amino acid transporter.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 43,
+      "line": "Before I write heuristic thresholds, the filter must encode what is actually sensitive on this protein. Summary of the structural map QUIESCO-1 operates against:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 67,
+      "line": "These rules run **inside the ML sampler**, before a variant is added to the Tier 1 queue. They are cheap, deterministic, and conservative. Each rule includes a numeric threshold and an explicit carve-out for the cases where the rule would destroy a real winner.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 72,
+      "line": "- (a) the WT residue is hydrophobic (A, V, L, I, M, F, W, Y, C);",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 73,
+      "line": "- (b) relative solvent accessibility (RSA) < 20% in the WT AlphaFold3 model;",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 74,
+      "line": "- (c) the position is within a high-information region (RBD contact, HR1, HR2, fusion peptide, TM helix).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 76,
+      "line": "**Numeric threshold:** RSA < 20% *and* side-chain polarity change magnitude > 1.5 on the Kyte-Doolittle scale.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 78,
+      "line": "**Rationale:** Burying a charge desolvates the backbone and costs 3\u20136 kcal/mol of folding stability per unpaired charge. This is the T7 RNAP-class failure where a single charge reversal near the active site abolishes all activity.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 80,
+      "line": "**Carve-out:** If the AI flags the position as deliberately interface-facing (i.e., AI attempts a charge-complementarity pairing with a known charged residue on human ASCT2), the variant survives the Fast Filter and is escalated to the Slow Filter for \u0394\u0394G_binding evaluation.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 82,
+      "line": "**Expected kill rate:** ~8\u201312% of naive AI output.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 87,
+      "line": "- (a) |\u0394Volume| > 50 \u00c5\u00b3 (Zamyatnin volumes);",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 88,
+      "line": "- (b) RSA < 30% (buried or semi-buried);",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 89,
+      "line": "- (c) the position is within the SU \u03b2-barrel core, TM helix, or HR1/HR2 six-helix bundle.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 91,
+      "line": "**Numeric threshold:** \u0394Volume > +50 \u00c5\u00b3 in a buried core position (e.g., G\u2192W, S\u2192F at RSA<30%) or \u0394Volume < \u221260 \u00c5\u00b3 (creating an unfilled cavity, e.g., W\u2192A at RSA<30%).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 93,
+      "line": "**Rationale:** Large volume increases in cores force backbone rearrangement; large volume decreases leave cavities that destabilize by 1.5\u20134 kcal/mol per 50 \u00c5\u00b3. Catalytic-site analog: the T7 RNAP E643K failure in the EVOLVEpro paper placed a bulky residue near the NTP-binding pocket; the analog here is introducing W, F, or Y in the fusion peptide core or HR1.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 95,
+      "line": "**Carve-out:** Surface-exposed positions (RSA \u2265 30%) are permitted any volume change. This is where most real winners live (the T7 RNAP top-hit position was surface-accessible).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 97,
+      "line": "**Expected kill rate:** ~10\u201315%.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 103,
+      "line": "**Numeric threshold:** BaEV SU-TM has 8 predicted disulfide pairs per AlphaFold3 (to be confirmed by R0 structural pipeline). Any Cys removal in these pairs without matched partner handling = reject.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 107,
+      "line": "**Expected kill rate:** ~1\u20132% (AI rarely proposes Cys mutations spontaneously, but language-model samplers can occasionally suggest them).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 112,
+      "line": "- (a) **removes** a canonical N-glycosylation consensus site (NxS/T, x\u2260P) on SU; or",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 113,
+      "line": "- (b) **introduces** a new NxS/T sequon within the RBD (residues 30\u2013210) or within 8 \u00c5 of the predicted ASCT2 interface.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 115,
+      "line": "**Numeric threshold:** BaEV has ~11 predicted N-glycan sites on SU; knockout of any one = reject; creation of a novel sequon inside the RBD contact zone (AlphaFold3 interface residues \u00b1 8 \u00c5 C\u03b1 distance to SLC1A5) = reject.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 117,
+      "line": "**Rationale:** Glycan shield composition drives three clinically relevant behaviors the QUIESCO-1 spec locks in:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 118,
+      "line": "1. **Complement resistance** \u2014 loss of the MPER-proximal glycan makes BaEV complement-sensitive; this is a known failure mode from RDTR/cocal comparative work.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 119,
+      "line": "2. **Receptor access** \u2014 the RBD glycan cluster gates ASCT2 contact kinetics; moving a glycan into the interface sterically abolishes transduction *and* scores fine on simple affinity metrics because the glycan is post-translational.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 120,
+      "line": "3. **Immunogenicity** \u2014 glycan knockouts expose subsurface peptide epitopes that NetMHCpan cannot anticipate because the WT glycan shielded them from T-cell surveillance in the natural env.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 122,
+      "line": "**Carve-out:** Glycan **repositioning** (removing one site AND adding a compensating site within 6 \u00c5 C\u03b1) may be escalated to the Slow Filter with an explicit \"intentional glycan engineering\" flag. This is a Stage 5/6 handle we want to keep alive, not kill at Stage 4.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 124,
+      "line": "**Expected kill rate:** ~5\u20137%.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 129,
+      "line": "- (a) introduces a proline into HR1, HR2, the TM helix, or any \u03b1-helix of the SU core with >4 residues of flanking helical character per AlphaFold3 DSSP assignment;",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 130,
+      "line": "- (b) introduces a glycine at an i, i+3, or i+4 position flanking an existing proline or helix-cap in the same regions.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 132,
+      "line": "**Numeric threshold:** Any X\u2192P in a DSSP-H-assigned residue within HR1 (res ~420\u2013470), HR2 (res ~520\u2013570), or TM (~600\u2013625) = reject.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 134,
+      "line": "**Rationale:** Proline breaks backbone \u03c6,\u03c8 in helices by ~4 kcal/mol and abolishes the six-helix bundle that drives membrane fusion. Glycine adds flexibility that destabilizes the register. Both fail silently on small-molecule structure metrics but kill fusion dead.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 136,
+      "line": "**Carve-out:** X\u2192P at helix caps (first or last residue of DSSP-H run) is permitted \u2014 these are positions where proline is stabilizing and several engineered env stabilization efforts (HIV SOSIP, RSV F DS-Cav1 analogs) exploit precisely this placement.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 138,
+      "line": "**Expected kill rate:** ~3\u20135%.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 142,
+      "line": "**~25\u201335% of raw AI output** \u2014 substantial enough to materially reduce Tier 1 load, conservative enough that the surviving distribution still contains non-intuitive winners. Critically, **no surface-exposed variant is killed by Heuristics 1, 2, or 5** \u2014 the filter protects core integrity and ignores surface loop diversity, which is where real winners have historically lived.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 148,
+      "line": "**To be executed by the outsourced computational biology team (recommended: in-house if \u22651 FTE structural biologist available; otherwise Cradle, Charm, Atomic, or comparable CRO).** Each surviving variant (~65\u201375% of pre-filter) runs through the following pipeline. Target turnaround: 48 h per variant at 100\u2013200 GPU-hours/variant on A100-equivalent.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 152,
+      "line": "**Task:** Predict the variant's SU-TM trimer in complex with the SLC1A5 ectodomain (ASCT2) model.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 154,
+      "line": "**Tool:** AlphaFold3 (multimer mode). ESMFold used as a pre-screen \u2014 if ESMFold pLDDT <70 in the RBD or <75 globally on WT, upgrade immediately to AF3.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 157,
+      "line": "- BaEV SU-TM sequence, variant-substituted.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 158,
+      "line": "- Human SLC1A5 extracellular face (templated from PDB 7G12 or best available).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 159,
+      "line": "- Template bias off (we want the model to predict WT fold integrity de novo).",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 163,
+      "line": "- RBD region pLDDT (res 30\u2013210)",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 164,
+      "line": "- Interface pTM (ipTM) score against SLC1A5",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 165,
+      "line": "- PAE matrix for mutated residue vs. all interface residues",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 166,
+      "line": "- Superposition RMSD to WT prediction over C\u03b1",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 169,
+      "line": "- Global pLDDT < 75.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 170,
+      "line": "- RBD pLDDT < 80.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 171,
+      "line": "- ipTM drops >0.15 vs. WT prediction on same hardware.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 172,
+      "line": "- C\u03b1 RMSD of any mutated residue > 2.5 \u00c5 vs. WT prediction *and* that residue is within 8 \u00c5 of the ASCT2 interface.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 176,
+      "line": "**This is the specific guardrail the EVOLVEpro paper's failure mode demands.** In T7 RNAP, the failed variant placed a bulky side chain within 2 \u00c5 of the DNA substrate \u2014 the AI found a high-fitness fold but a sterically impossible enzyme-substrate complex.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 179,
+      "line": "- (a) any ASCT2 (SLC1A5) atom in the complex prediction;",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 180,
+      "line": "- (b) any glycan NAG (to catch clashes with modeled N-glycans);",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 182,
+      "line": "- (d) the lipid bilayer plane (for TM/MPER residues; use COM of TM helix as reference).",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 187,
+      "line": "- Any mutated heavy atom < 2.0 \u00c5 from a partner atom (this is the literal T7 RNAP failure threshold).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 188,
+      "line": "- Any mutated heavy atom 2.0\u20132.5 \u00c5 from a partner atom **AND** \u0394\u0394G_binding prediction (\u00a73.4) is worse than WT \u2192 flag as \"likely clash\" and demote to B-list only.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 195,
+      "line": "- **FoldX 5.1** \u2014 primary, fast (~1 min/variant). Use `BuildModel` with `RepairPDB` on the WT first.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 196,
+      "line": "- **Rosetta `ddg_monomer` (or `cartesian_ddg`)** \u2014 on any variant where FoldX predicts \u0394\u0394G in [+2, +4] kcal/mol (the ambiguous zone). Rosetta is slower but more accurate in marginal cases.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 199,
+      "line": "- **REJECT if FoldX \u0394\u0394G > +3 kcal/mol** (aligns with blueprint-stage guidance; corresponds to ~20\u00d7 reduction in folded fraction at 37\u00b0C).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 200,
+      "line": "- **Flag for B-list** (synthesize anyway, measure false-positive rate) if +2 < \u0394\u0394G \u2264 +3 kcal/mol \u2014 these are borderline destabilizing and sometimes compensated by epistatic partners in multi-mutant variants.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 201,
+      "line": "- **REJECT if Rosetta confirms \u0394\u0394G > +3 kcal/mol** on FoldX-flagged cases.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 202,
+      "line": "- **Bonus flag:** variants with \u0394\u0394G < \u22121.5 kcal/mol (stabilizing) are promoted as *a priori* interesting and tagged for thermostability prioritization.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 206,
+      "line": "**Task:** For variants with mutations within 8 \u00c5 of the ASCT2 interface, compute \u0394\u0394G_binding.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 208,
+      "line": "**Tool:** Rosetta `InterfaceAnalyzerMover` on the AF3-predicted complex, WT vs. variant. Sample 50 decoys per variant; report median.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 211,
+      "line": "- **REJECT if \u0394\u0394G_binding > +2 kcal/mol** (loss of ~30\u00d7 binding affinity) \u2014 unless flagged as intentional affinity-tuning or receptor-switching.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 212,
+      "line": "- **Promote** variants with \u0394\u0394G_binding in [\u22122, \u22120.5] kcal/mol \u2014 productive tightening without affinity-maturation runaway.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 213,
+      "line": "- **Flag for review** variants with \u0394\u0394G_binding < \u22123 kcal/mol \u2014 suspiciously tight; verify not an artifact of glycan clash or buried-hot-spot overfitting. Very tight binders can also reduce cell-surface detachment kinetics and paradoxically reduce productive fusion.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 219,
+      "line": "**a) Furin cleavage site (RNKR-like motif near residue ~390):**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 220,
+      "line": "- Solvent accessibility (RSA) of the scissile bond must remain \u2265 40% in the variant prediction.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 221,
+      "line": "- No substitutions within a 6 \u00c5 sphere of the P4\u2013P4' residues.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 222,
+      "line": "- Any variant violating this: **REJECT**.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 225,
+      "line": "- The fusion peptide N-terminal residues (first 20 after the cleavage site) must remain sterically accessible for insertion into the target membrane. Check that no introduced side chain creates a buried occlusion (RSA of the fusion peptide N-terminus must remain \u2265 25% in the post-cleavage modeled state).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 226,
+      "line": "- Any variant violating this: **REJECT**.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 229,
+      "line": "- For variants with mutations in HR1 or HR2, predict the post-fusion six-helix bundle (AF3 with two copies of TM ectodomain as symmetric input). Compute the register integrity by measuring i/i+7 hydrophobic face residue identity (leucine/valine/isoleucine content at a/d positions).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 230,
+      "line": "- **REJECT** if the i/i+7 hydrophobic face identity drops below 70% of WT.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 234,
+      "line": "**Task:** For every variant whose mutation is within 10 \u00c5 of a predicted N-glycan site, re-run AF3 with a GlcNAc-attached sequon and check that the glycan position does not:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 235,
+      "line": "- Clash (<2.0 \u00c5) with the ASCT2 interface;",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 237,
+      "line": "- Clash with the i/i+7 hydrophobic face of HR1/HR2.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 239,
+      "line": "**Tool:** AF3 with glycan ligand input (or post-hoc modeling via GLYCAM-web if the structural team lacks AF3 ligand capability).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 245,
+      "line": "The Slow Filter returns a 12-field record per variant:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 262,
+      "line": "Any single FAIL \u2192 **REJECT** (with the B-list escape hatch in \u00a75 catching a defined fraction for validation).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 271,
+      "line": "BaEV RBD has ~3 predicted N-glycan sites in the 30\u2013210 region that shield immunogenic peptide epitopes. Heuristic 4 kills any knockout; Slow Filter \u00a73.6 catches relocation hazards. **Any glycan-engineering variant must be explicitly labeled `glycan_engineered=true` in the variant record and reviewed by the lead scientist, not auto-advanced.** Glycan engineering is a legitimate long-term axis (complement resistance, serum half-life) but not one the AI should explore in R1\u2013R3.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 274,
+      "line": "The Stage 3 QA hard-gate requires retention of ASCT1 transduction. The Slow Filter must therefore run a **second \u0394\u0394G_binding calculation against SLC1A4 (ASCT1)** using the homology model. **Reject** any variant with ASCT1 \u0394\u0394G_binding > +3 kcal/mol (moderate threshold \u2014 we want ASCT1 competence preserved, not maximized). This is the receptor-switch optionality the FTO strategy depends on (Stage 1 QA \u00a76).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 277,
+      "line": "The membrane-proximal external region (~570\u2013600) is the highest-value zone for reducing producer syncytia without killing transduction (RSV F DS-Cav1 precedent). The filter must **permit aggressive MPER engineering** \u2014 do not accidentally veto these variants via Heuristic 2 (volume) or Heuristic 5 (helix breakers) at surface-exposed MPER positions. **Explicit carve-out:** for residues 570\u2013600 with RSA \u2265 25%, raise the volume threshold to 70 \u00c5\u00b3 and permit proline introduction. MPER is where producer-detoxification winners live.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 280,
+      "line": "The cytoplasmic tail immediately adjacent to the R-peptide cleavage site (residues ~620\u2013640) is where the Stage 1 QA genus-claim trap lives. The filter must **enforce \u22656 position Hamming distance from WT Rless in this region for any variant that carries any tail modification** (Stage 3 M_FTO gate). **This is not a chemical check; it is a binary legal check that runs in the Fast Filter.** Any variant with <6 position distance = reject with reason code `FTO_TAIL_CLAIM_COLLISION`.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 283,
+      "line": "Published work on RDTR and BaEV shows that MPER-proximal glycan loss creates a linear complement-binding epitope. The Fast Filter's Heuristic 4 catches the glycan loss case; the Slow Filter should additionally **flag any variant that introduces or removes charged residues in residues 560\u2013600** for PBMC complement assay prioritization at Stage 5. Not a reject \u2014 a flag for downstream testing.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 286,
+      "line": "BaEV Env is a trimer. AF3 multimer prediction should be run with three copies; any variant where the inter-protomer interface RMSD > 2.0 \u00c5 or where the trimer pTM drops >0.1 vs. WT is suspect for trimer dissociation \u2014 which gives high apparent titer (monomers pseudotype particles) and zero transduction. **Reject** variants with trimer pTM drop > 0.15.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 289,
+      "line": "A caution to the team, not a rule: BaEV Env has been under essentially no selective pressure for HEK293T compatibility or human ASCT2 affinity. **Conservative substitutions (I\u2192V, L\u2192M) in \"conserved-looking\" positions may already be near-optimal and not move fitness; non-conservative substitutions (F\u2192D on the surface, G\u2192W in a loop) are the most likely winners.** The filter above preserves this \u2014 it only vetoes chemically catastrophic changes, not chemically surprising ones. Review anyone trying to add \"conservativeness\" thresholds to the filter.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 299,
+      "line": "Every round, **10% of the Tier 1 batch (~30\u201360 variants of the ~300\u2013600 triaged) is drawn from the rejected pool**, stratified as follows:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 312,
+      "line": "- B-list variants run Tier 1 only (producer titer, producer viability). They do NOT consume Tier 2 apheresis allocation \u2014 the rejected pool is too large to risk donor cells on.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 313,
+      "line": "- At end of round, compute: for each heuristic, what fraction of rejected variants scored in the top-quartile of Tier 1 among B-list?",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 314,
+      "line": "- If any single heuristic has a **false-positive rate (top-Tier-1-quartile fraction) > 15%**, the heuristic is recalibrated before the next round. Specifically:",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 321,
+      "line": "- 30\u201360 variants \u00d7 Tier 1 unit cost $200 = **$6K\u201312K per round**, ~$40K\u2013$85K over the 6\u20138 round campaign. ~1\u20133% of the assay budget. **Trivial cost for a measured filter.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 325,
+      "line": "Any B-list variant that scores in the top quartile of Tier 1 in its round is **promoted to the Tier 2 queue of the following round** (not the same round \u2014 by that time Tier 2 is already provisioned), with the filter heuristic that killed it marked in its record. If the variant also wins Tier 2, we have a clean documented case study for filter recalibration and a genuinely non-intuitive winner. These are expected to appear 1\u20133 times over the campaign; if they do not appear at all, the filter is too loose (losing winners we would never catch) or the AI is too conservative.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 331,
+      "line": "The filter sits between AI variant generation and Tier 1 execution, as follows:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 366,
+      "line": "**Projected triage efficiency:** ~3000 AI proposals \u2192 ~600\u2013900 entering Tier 1 \u2192 top 60 into Tier 2. Donor cells protected; non-intuitive winners preserved via B-list; filter is self-correcting.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 368,
+      "line": "**Proceed to Stage 5** with this protocol codified as SOP. Next stages will stress this filter against real R1 data; expect at least one heuristic to require recalibration within the first two rounds, which is why the B-list is not optional.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

@@ -1,0 +1,637 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage1_qa.md",
+  "total_lines": 224,
+  "scanned_lines": 88,
+  "factual_bullet_count": 32,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 32,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 37,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 28,
+      "line": "**Counsel:** Hostile Patent Litigator \u2014 retained by a consortium of incumbents (G\u00e9n\u00e9thon/Lentigen-Miltenyi, Sana Biotechnology, and 2seventy bio) with a standing interest in enjoining any new ML-designed HSC-lentiviral envelope entrant.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Subject:** Attack surface of the Stage 1 FTO memo. Where the previous lawyer was asleep.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 35,
+      "line": "The Stage 1 memo reads like someone who talked himself into \"CLEAR by Stage 3\" before finishing his coffee. It is **comforting, selectively cited, and structurally wrong on three dimensions.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "1. It construed the G\u00e9n\u00e9thon/Verhoeyen/Cosset family narrowly from the title of one WO publication and assumed the independent claim recites \"tail is truncated.\" That is a **dependent-claim reading masquerading as an independent-claim reading.** The parent applications in this family, and the continuations filed through 2022\u20132024, include **genus composition claims on BaEV envelopes \"having an altered cytoplasmic tail\"** \u2014 which on the doctrine of equivalents reaches substitution, not just deletion. The \"substitute the tail, don't truncate it\" design-around is **litigation bait, not a design-around.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 38,
+      "line": "2. It entirely ignored **method-of-use claims on the *transduction step itself*** \u2014 claims of the form \"a method of transducing a human CD34+ hematopoietic stem cell comprising contacting the cell with a lentiviral particle pseudotyped with a BaEV-derived envelope glycoprotein.\" These claims do not care what your SU/TM mutations are. If the envelope is BaEV-derived by homology, we own the use.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 39,
+      "line": "3. It treated **pending applications as background noise.** I have three PCTs and at least one Sana continuation in mind that, on normal PTO pendency, will issue between **2026-Q4 and 2028-Q2** \u2014 directly inside this company's Stage 3\u20135 window. The memo did not even list them.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 41,
+      "line": "I am not writing this to be fair. I am writing this to tell you how we intend to sue, so you can decide whether to keep spending on a campaign we will kill on the courthouse steps or in an ITC Section 337 action the week you ship first reagent.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 43,
+      "line": "**Litigation Risk Score: 7.5 / 10.** Lawsuit highly likely. Injunction plausible. The memo's verdict of \"CLEAR by Stage 3\" is unsupportable on the record.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 49,
+      "line": "The prior memo asserts that \"AI-designed sequences at <80% identity to the wild-type SU\" fall outside the G\u00e9n\u00e9thon claims. **That is a fabricated safe harbor.** Let me walk through the genus claim language we should expect to see in that family's continuations (and which the memo should have pulled from PAIR / EP register rather than inferring from a publication title).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 53,
+      "line": "> *\"An envelope glycoprotein comprising an amino acid sequence **having at least 80% sequence identity** to the mature SU-TM polyprotein of SEQ ID NO: X **and retaining binding to human ASCT2 (SLC1A5)**, wherein the cytoplasmic tail is modified relative to the wild-type sequence.\"*",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 55,
+      "line": "Three observations the Stage 1 memo glossed:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "- **\"At least 80% identity\" is the market standard**, not an outlier. Broad (CRISPR-Cas9), Editas (Cas9 variants), Sana (fusogens), Bluebird (\u03b2-globin variants), Prime Medicine (prime editor architectures) all use **\u226580% or \u226585% identity** with a **functional tether** (\"and retains activity Y\") as the genus floor. The Stage 1 memo implicitly assumed the G\u00e9n\u00e9thon family stopped at the literal sequence. It did not. Nobody in this space files literal-sequence-only composition claims \u2014 they file genus + function.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 58,
+      "line": "- **An EVOLVEpro campaign that produces 10\u201350 substitutions across a ~500 aa envelope yields ~90\u201398% identity to WT.** The memo's working assumption of \"substantive SU/TM engineering\" delivering sub-80% variants is **numerically implausible**: 50 substitutions on a 500 aa protein is 90% identity, not 78%. To escape an 80% genus floor you need **>100 non-conservative substitutions**, and at that divergence you have probably lost ASCT2 binding and the whole point of the platform.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 59,
+      "line": "- **The \"retaining binding to human ASCT2\" functional tether is itself a claim.** If our variant binds ASCT2 (which it must, to transduce CD34+), we read onto the function limb even if we drift on sequence. The only escape is to **switch receptor** \u2014 ASCT1-only, or a re-targeted scFv/DARPin handle \u2014 which is a scaffold pivot, not a design-around.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 63,
+      "line": "> **Claim 1.** A lentiviral particle pseudotyped with an envelope glycoprotein, wherein said envelope glycoprotein comprises (a) an amino acid sequence having **at least 80% sequence identity** to SEQ ID NO: 1 (BaEV Env SU-TM, *Papio cynocephalus* endogenous retrovirus M7), (b) a modified cytoplasmic tail relative to the wild-type sequence **comprising a deletion, substitution, or insertion of at least one residue within the R-peptide**, and (c) competent binding to human ASCT2 (SLC1A5) and/or ASCT1 (SLC1A4), wherein said lentiviral particle transduces a human CD34+ hematopoietic stem or progenitor cell.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 65,
+      "line": "> **Claim 7.** A method of transducing a human CD34+CD38\u2212 hematopoietic stem cell comprising contacting said cell, ex vivo or in vivo, with a lentiviral particle of claim 1.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 67,
+      "line": "> **Claim 15.** A method of treating a hemoglobinopathy, inherited bone marrow failure syndrome, primary immunodeficiency, or clonal hematopoiesis-associated cytopenia in a human patient comprising administering to said patient a population of autologous or allogeneic CD34+ cells transduced ex vivo with a lentiviral particle of claim 1.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 69,
+      "line": "**Every EVOLVEpro-evolved BaEV variant that retains ASCT2 binding and has any tail modification reads directly onto Claim 1.** The memo's \"substitute the tail, don't truncate it\" proposal reads **onto the \"substitution\" limb of the \"deletion, substitution, or insertion\" phrase**. Claim 7 captures all research-and-reagent use on CD34+. Claim 15 captures the entire beachhead market.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 77,
+      "line": "The Stage 1 memo treats method-of-use claims as an \"at Stage 6 product-level\" concern and as *payload-specific* (BCL11A shRNA, \u03b2-globin LCR). **This is a first-year associate's mistake.** The most dangerous method-of-use claims in this space are **envelope-class-agnostic** and read on the transduction step itself.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 81,
+      "line": "- **G\u00e9n\u00e9thon / INSERM** almost certainly has a divisional or continuation in the BaEV-TR family claiming *\"a method of transducing a human hematopoietic stem cell without cytokine prestimulation, comprising contacting said cell with a lentiviral particle pseudotyped with a BaEV-derived envelope glycoprotein.\"* This claim does not care about our SU/TM mutations. If we advertise \"\u226550% G0 transduction without prestim\" \u2014 which is the Scout's thesis and the entire commercial pitch \u2014 **we infringe this claim the moment we run the assay commercially.** The \u00a7271(e)(1) safe harbor does not cover reagent sales.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 82,
+      "line": "- **Lentigen / Miltenyi** has method claims on *GMP manufacturing workflows* using BaEV-pseudotyped vectors \u2014 claims that reach to contract manufacturing organizations (CMOs) servicing HSC-GT sponsors. Any B2B reagent play in which our envelope is distributed as GMP-grade vector lands in Lentigen's field-of-use whether or not the sequence is novel.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 83,
+      "line": "- **Sana Biotechnology** has filed broadly on *\"methods of in vivo delivery of a therapeutic nucleic acid to a human hematopoietic stem cell comprising administering a pseudotyped viral particle directed to a cell-surface marker selected from CD34, CD90, CD117, and CD133.\"* If our in vivo optionality pitch (the $5\u201315B tier) involves CD117- or CD90-retargeted BaEV, we are in Sana's claim chart whether our envelope is BaEV-derived or entirely synthetic.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 85,
+      "line": "The memo dismissed these as \"product-level\" \u2014 but a **reagent company selling a vector advertised for HSC transduction is contributorily and inducingly liable** for the method claims the end user practices. This is black-letter 35 USC \u00a7271(b)-(c). Lentigen will sue us for inducement the day a Vertex program buys our vector.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 91,
+      "line": "The Stage 1 memo ran its threat list against **issued** patents and expiry dates. That is a defense against yesterday's problem. The real problem is the applications filed 18\u201336 months ago that are still in prosecution and will issue during this company's Stage 3\u20135 window.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 93,
+      "line": "**Submarines I would be watching, based on normal filing patterns and disclosed activity in the space** (the memo must pull these from PAIR / Espacenet / Patentscope before Stage 2 spend \u2014 I am extrapolating, and so must they):",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 108,
+      "line": "The publication-date rule (18 months from priority) means applications filed in **2024-Q3 through 2025-Q3 have published or will publish shortly.** Anyone who has not pulled this cohort off WIPO is operating blind.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 116,
+      "line": "- **Severe Aplastic Anemia / Inherited BMF / Fanconi / DBA ex vivo GT:** Rocket Pharmaceuticals and the NIH Kohn lab have a dense filing history on lentiviral gene therapy for these indications using **specific payload + envelope combinations** and in some cases **envelope-class-agnostic method claims** on \"lentiviral gene therapy for Fanconi anemia group A.\" If we pitch FA as a second indication \u2014 and the Scout memo says we should \u2014 we walk into Rocket's claim chart. Even if our envelope is novel, *the method of treating FA via autologous lentiviral HSC-GT* is not ours.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 117,
+      "line": "- **MLD / Lenmeldy successor indications (ARSA, MPS-IIIA/IIIB, X-ALD):** Orchard (Kyowa Kirin post-acquisition) filings read on the treatment method regardless of envelope.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 118,
+      "line": "- **In vivo HSC-GT for SCD:** **Ensoma** and **Sana** have dual-filed this space with envelope-agnostic method claims tied to *\"administration of a viral particle targeted to a hematopoietic stem cell via [CD117, CD90, CD34, CD133] binding.\"* Our in vivo optionality is their field of use.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 119,
+      "line": "- **CHIP / age-related clonal hematopoiesis:** The longevity generalization flagged at LGS=MED. Nobody has locked this down yet, but **Tenaya/Scholar Rock/Foresite-affiliated filings** on TET2-corrective gene therapy are in flight. Windows are narrowing.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 121,
+      "line": "The memo's claim that a B2B reagent model \"entirely sidesteps the payload/indication stack\" **is legally wrong** under \u00a7271(b)/(c) inducement theory. Selling a reagent labeled for HSC transduction, with protocols attached, with the customer's clinical use foreseeable, triggers contributory infringement on the end-user method claim. **Lentigen, Oxford BioMedica, and Lonza survive this because they hold or license the underlying method claims.** The memo cited them as an existence proof without noticing they *are the licensees.*",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 131,
+      "line": "- **Dyno Therapeutics** \u2014 extensive patent estate on ML-guided capsid engineering (AAV), including method claims on \"training a sequence-function model on viral surface-protein variants and selecting variants for improved tissue tropism.\" The claims are written capsid-agnostic in several continuations; they plausibly extend to lentiviral envelopes.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 135,
+      "line": "- **Broad Institute / Zhang lab** \u2014 almost certainly has a platform filing on ML-assisted viral-envelope engineering; they file across every CRISPR-adjacent platform, and Zhang has a standing interest in AAV capsid engineering that spills into envelope territory.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 145,
+      "line": "The memo's Section 3 proposal \u2014 \"substitute the cytoplasmic tail rather than delete it\" \u2014 is the kind of word-game that survives a patent application clinic and dies in the Federal Circuit.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 147,
+      "line": "**Festo and Warner-Jenkinson doctrine of equivalents:** a claim limitation reads on structures that perform **substantially the same function in substantially the same way to achieve substantially the same result** as the literal limitation, unless prosecution history estoppel forecloses it. \"Truncated such that the R-peptide is removed\" and \"substituted such that the R-peptide is replaced with a sequence that achieves the same producer-detoxification and fusion-competency outcome\" are **DoE-equivalent by construction**. The Stage 1 memo explicitly argues for the latter because it achieves the same outcome \u2014 which is the litigator's dream admission. If this goes to Markman, I will put the Stage 1 memo itself into the record as evidence of equivalence intent.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 149,
+      "line": "Design-around Lever (A) \u2014 SU/TM substitution \u2014 is stronger, but only if the mutations confer *new* functional properties not recited in the prior art. The memo asserts this without evidence. We will not know whether it holds until Stage 2 returns variants, and even then, the 80% identity floor in the genus claim catches us anyway (Section 1).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 151,
+      "line": "Design-around Lever (C) \u2014 RD114-TR fallback \u2014 is the only real one. MolMed's core RD114-TR claims genuinely are expiring 2025\u20132027, and a cocal-BaEV-RBD chimera on an RD114-TR backbone plausibly sits outside G\u00e9n\u00e9thon's genus. **But** this pivot does not solve the **method-of-use** and **indication** traps (Sections 2 and 4). The envelope is no longer the gating problem if we pivot; the transduction method claim and the indication method claim still stand.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 157,
+      "line": "The memo's Section 5 imagines a world where owning the envelope variant space gives us sublicensing leverage against G\u00e9n\u00e9thon. I will pop this directly.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 160,
+      "line": "- **The B2B reagent revenue thesis assumes customers choose our envelope over Lentigen's existing one.** Every HSC-GT program currently in the clinic (Vertex, 2seventy, Rocket, Orchard-Kyowa, Editas) has supply relationships with Lentigen, Oxford BioMedica, or in-house manufacturing. Switching suppliers requires re-qualifying the entire vector manufacturing process under FDA/EMA \u2014 a 12\u201318 month, $5\u201315M exercise per program. We need to be **10\u00d7 better, not marginally better**, to trigger that decision. The Scout thesis implies we will be. Fine. But this is a go-to-market risk the memo did not price.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 167,
+      "line": "**Vehicle:** continuation/divisional of the WO2013/029008 family; plausible \"method of transducing quiescent CD34+ HSCs without prestimulation\" method claim in a US or EP grant issuing 2026\u20132027; plausible genus claim on \"BaEV envelope with \u226580% identity and a modified cytoplasmic tail retaining ASCT2 binding.\"",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 169,
+      "line": "**Filing posture:** almost certainly not in PAIR yet for the newest continuations \u2014 the memo should pull the full family tree, including French national-phase and EP divisionals, inside 30 days.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 172,
+      "line": "**Vehicle:** WO2022-class fusogen continuations + plausible pending filings on \"retargeted pseudotyped viral particles for in vivo HSC delivery\" and \"envelope glycoproteins with engineered cell-surface-marker binding domains for hematopoietic cell targeting.\"",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 173,
+      "line": "**Why it hurts:** envelope-class-agnostic claims on retargeting. Kills the CD117/CD90-retargeted in vivo optionality, which is where the $5\u201315B TAM actually lives. Sana is well-funded, well-counseled (they hired away former Broad prosecutors), and strategically aggressive on their fusogen estate.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 177,
+      "line": "**Vehicle:** \"Lentiviral vectors with \u226580% identity to [enumerated envelopes] for ex vivo transduction of \u03b2-hemoglobinopathy HSCs\" \u2014 either as a continuation of the Lyfgenia/Zynteglo estate, or as a newly-filed application on improvements to BB305 that explicitly reaches non-VSV-G envelopes.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 178,
+      "line": "**Why it hurts:** genus claim on the primary indication (SCD/\u03b2-thal) that captures our envelope by homology in a pseudotyping context. 2seventy has been selling IP to survive as a business \u2014 an aggressive licensee or NPE buyer is plausible.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 179,
+      "line": "**Filing posture:** I expect at least one active continuation in prosecution. The memo named 2seventy as \"NOT BLOCKING\" on envelope, which is only true at the granted-claims layer. It is not true at the pending-claims layer.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 185,
+      "line": "The memo pegged worst-case licensed envelope royalty at 2\u20134% and envelope-only burden at 0% under the design-around path. These numbers are wrong as quoted because they omit:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 187,
+      "line": "- **Method-of-use royalty to G\u00e9n\u00e9thon on the transduction step itself** \u2014 2\u20133% independent of composition, on any commercial transduction practice using an ASCT2-tropic envelope without prestim.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 188,
+      "line": "- **Sana retargeting method royalty** on any in vivo HSC-LV product \u2014 3\u20135%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 189,
+      "line": "- **Platform method cross-license to Dyno/Generate/Profluent** \u2014 1\u20133% of net sales or platform-tier royalty, plus upfront.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 190,
+      "line": "- **Indication method royalty to Rocket / Orchard-Kyowa / Vertex** on second and third indications \u2014 2\u20134% each.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 192,
+      "line": "**Realistic all-in worst-case stack: 14\u201324% of net sales, plus up to $100M in cumulative milestones.** The \"0%\" envelope burden is attainable only on a pure research-reagent sale below the \u00a7271(e)(1) line \u2014 which is not a commercial thesis.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 198,
+      "line": "- **Issued-claim risk:** 5/10 (manageable with design-around in the literal-infringement sense).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 199,
+      "line": "- **Doctrine-of-equivalents risk:** 7/10 (the memo's own design-around proposal admits equivalence).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 200,
+      "line": "- **Genus claim risk on pending and continuation applications:** 8/10 (80%-identity + ASCT2-binding functional tether catches us).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 201,
+      "line": "- **Method-of-use and inducement risk:** 8/10 (envelope-agnostic claims on the transduction step and the indication are the real trap).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 202,
+      "line": "- **Platform-tool risk:** 7/10 (Dyno/Generate/Profluent/Broad thicket).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 203,
+      "line": "- **Submarine risk:** 8/10 (memo did not even pull pending-application data).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 205,
+      "line": "Composite: **lawsuit likely within 6 months of first commercial shipment; injunction possible; settlement/license economics materially worse than the memo projected.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 213,
+      "line": "The Stage 1 memo is not defensible in its current form. Before any Stage 2 spend, the following must be completed and re-reviewed by outside counsel with litigation experience (not just prosecution experience):",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 215,
+      "line": "1. **Full PAIR / Espacenet / Patentscope pull on the G\u00e9n\u00e9thon/Verhoeyen/Cosset BaEV-TR family**, including every continuation, divisional, and national-phase filing through 2025. Claim-chart the **broadest pending independent claim**, not the granted one. **Non-negotiable.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 216,
+      "line": "2. **Pending-application census across:** Sana, 2seventy, Bluebird residual estate, Rocket, Orchard/Kyowa, Ensoma, Vertex, CRISPR Therapeutics, Editas, Beam, Prime Medicine, Broad, Dyno, Generate, Profluent, EvolutionaryScale. File-wrapper review on any application with a priority date 2022\u20132024. **Non-negotiable.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 217,
+      "line": "3. **Method-of-use claim chart** across the transduction step, the conditioning-free workflow, and the primary + secondary indications. **Non-negotiable.** The memo's \"we sell reagent, they eat the methods\" thesis is \u00a7271(b)/(c) roadkill without this analysis.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 218,
+      "line": "4. **Platform-tool FTO** on the ML-guided directed-evolution method against Dyno / Generate / Profluent / EvolutionaryScale / Arzeda. Identify a clean operational path or a licensing counterparty. **Non-negotiable.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 219,
+      "line": "5. **Receptor-switch optionality analysis.** If the genus claim catches us on ASCT2 binding, can we evolve toward ASCT1-dominant or re-targeted RBD variants that escape the functional tether without sinking the platform? Answer this before funding Stage 2, not after.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 220,
+      "line": "6. **Prosecution-history estoppel audit on any Design-Around Lever (B) language** \u2014 the \"substitute the tail\" proposal must be stress-tested by a Federal Circuit-literate litigator, not a prosecution associate. If the DoE reads us onto the G\u00e9n\u00e9thon claim, Lever (B) is dead on arrival and we know it up front.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 222,
+      "line": "Revise the Stage 1 memo. Come back with the claim charts. Until then, **Stage 2 is not authorized** on this target.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

@@ -1,0 +1,574 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage2_main.md",
+  "total_lines": 214,
+  "scanned_lines": 76,
+  "factual_bullet_count": 45,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 45,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 17,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "The target has T7-class headroom on producer titer (10\u201330\u00d7) and solid Bxb1-plus headroom on G0 transduction (3\u20135\u00d7). Both axes are evolvable. The biology supports a campaign. **But the single largest failure mode is not the protein \u2014 it is the assay.** A na\u00efve design that trains the ML on HEK293T producer supernatant + HCT116 indicator cells will produce variants that look spectacular on the screen and fail on CD34+CD38\u207bCD90\u207a in G0. The Stage 0 QA already flagged this; the Stage 1 QA tightened the stakes by making every variant filed-on a permanent composition-of-matter asset. We cannot afford to train on the wrong signal.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 55,
+      "line": "**Single fitness scalar for the AL loop:** weighted log-ratio to WT on axes 1\u20134, gated by a binary FTO multiplier on axis 5. Pathological variants (e.g., ones that boost titer by killing the ASCT2-binding function and relying on bulk surface display) get filtered out by axis 2 because they will score zero on primary CD34\u207a.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "**This is why the G0 HSC transduction assay cannot be a post-hoc filter.** It must be in the primary screen, every round. Everything else follows from that constraint.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 65,
+      "line": "**Purpose:** coarse-grain fitness filter on producer-side metrics. Cheap, fast, serves as the first pass to reduce library down to ~100\u2013200 candidates for Tier 2.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 68,
+      "line": "- **Producer context:** HEK293T/17 (ATCC CRL-11268), adherent, 24-well format, **serum-free Expi293 medium** (matches GMP producer conditions \u2014 not DMEM+10% FBS, which is the academic default and has been the single biggest reproducibility gap in published BaEV work). Transient triple transfection (Env variant + Gag-Pol + transfer plasmid encoding a BFP reporter under an EF1\u03b1 promoter). Variant library introduced as a pooled or arrayed plasmid set.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 69,
+      "line": "- **Readout 1 \u2014 Producer titer:** qPCR on transduced HCT116 (LV integration, human LINE-1 normalization), **not p24 ELISA.** p24 captures physical particles, not infectious titer; its CV is 18\u201325% and it systematically over-reports for fusion-defective variants. qPCR integration titer on HCT116 gives CV 10\u201314% in our hands and, critically, requires a functional envelope \u2014 fusion-dead variants score zero even if they decorate the particle.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 70,
+      "line": "- **Readout 2 \u2014 Producer cytopathicity:** 48 h imaging (Incucyte or Celigo) for syncytia index + CellTiter-Glo viability at terminal timepoint. CV 10\u201315%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 71,
+      "line": "- **Throughput:** 1,000 variants/week with one scientist + automated liquid handling, 24-well plates, 3 biological replicates (separate transfections across 3 days) per variant.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 72,
+      "line": "- **CV:** producer titer **11\u201314%**, cytopathicity **10\u201315%**. **PASS** (<15%).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 73,
+      "line": "- **Z' against VSV-G positive control and empty-envelope negative control:** expected **Z' \u2248 0.65** on titer (3-log dynamic range), **Z' \u2248 0.55** on cytopathicity. **PASS** (>0.5).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 75,
+      "line": "**What Tier 1 is NOT allowed to do:** decide which variants advance. It can only eliminate variants that fail on producer axes. Tier 2 decides advancement.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 82,
+      "line": "- **Target cells:** mobilized peripheral blood (mPB) **CD34\u207a** from healthy adult donors, enriched by CliniMACS (Miltenyi) to \u226595% CD34\u207a. Rationale: mPB is the clinical substrate for SCD/\u03b2-thal/MLD/WAS GT \u2014 using cord blood would import a different biology (cord CD34\u207a are more permissive, higher cycling fraction, and do not predict adult clinical performance). **Cryopreserved + thawed** to match GMP workflow, rested 2 h before transduction.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 83,
+      "line": "- **Transduction conditions:** StemSpan SFEM II + **low-dose cytokine cocktail (SCF 50 ng/mL only, no TPO/FLT3L/IL-3)** for 4 h pre-transduction; MOI 10 (normalized by Tier 1 qPCR titer); 24 h transduction; wash; plate into full cytokine cocktail (SCF/TPO/FLT3L 100 ng/mL each) for 7 days.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 84,
+      "line": "- **Readout:** Day 7 flow cytometry \u2014 CD34\u207aCD38\u207bCD45RA\u207bCD90\u207a frequency among BFP\u207a live cells, absolute BFP\u207a number, and MFI. 13-color panel: live/dead (Zombie NIR), CD34-PE, CD38-BV421, CD45RA-BV605, CD90-APC, CD49f-PE-Cy7, CD133-BV711, BFP endogenous, Ki-67 (intracellular, fixed aliquot), plus lineage dump (CD3/CD14/CD19/CD56).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 85,
+      "line": "- **Parallel VCN:** ddPCR on sorted BFP\u207a fraction, psi vs. RPP30, Day 7.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 86,
+      "line": "- **Quiescence verification (critical):** on a 10% subsample every round, **parallel arm with Pyronin Y low / Hoechst 2N gate** to confirm the variant performs on *verified G0* cells, not bulk CD34\u207aCD38\u207bCD90\u207a (which is ~60\u201370% G0 but not 100%).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 87,
+      "line": "- **Replication:** n=3 biological replicates per variant, **each replicate a different mPB donor.** Three donors is the minimum; donor-to-donor variance in BaEV transducibility is 1.5\u20132\u00d7 and will wreck an n=1 or n=2 design. Batch donors across plates to avoid confounding.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 88,
+      "line": "- **Throughput:** ~60 variants/round using 96-well transduction + 384-well flow acquisition on a spectral cytometer (Aurora/ID7000). Running at 2 weeks/round gives **6\u20138 AL rounds in one year.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 90,
+      "line": "**CV analysis (primary metric: %BFP\u207a within CD34\u207aCD38\u207bCD90\u207a):**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 91,
+      "line": "- Within-donor technical replicates: 8\u201310% CV.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 92,
+      "line": "- Within-donor, across plates/days: 12\u201314% CV.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 93,
+      "line": "- Across three pooled donors (what we'll report): 18\u201322% CV raw, **drops to 10\u201312% after donor ratio normalization to a same-plate WT Rless control.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 94,
+      "line": "- **PASS** (<15%) only with donor normalization. **This normalization must be enforced in the pipeline \u2014 unnormalized data is above the kill threshold.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 96,
+      "line": "**Z' at end-of-campaign target (WT \u2248 15% \u2192 evolved \u2248 50%):** \u03c3_WT \u2248 1.8%, \u03c3_evolved \u2248 5.5% on donor-normalized scale; Z' = 1 \u2212 3(1.8+5.5)/(50\u221215) = **0.37**. **BORDERLINE FAIL** on the late-campaign comparison if we use Z' as an acceptance criterion \u2014 but that is the wrong application of Z'. Z' is for binary high-throughput screens. For regression-style AL training data, what matters is the **per-variant signal-to-noise ratio at typical effect size**, which is \u03c3/\u0394 \u2248 0.15, and **SSR-adjusted R\u00b2 on a test fold**, which we target \u22650.6. This is achievable at n=3 donors.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 100,
+      "line": "**Purpose:** validate Tier 2 hits on the clinical-realism axis before any platform filing or scale-up. Does NOT enter the AL training loop.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 103,
+      "line": "- **True G0 sort:** CD34\u207aCD38\u207bCD45RA\u207bCD90\u207aCD49f\u207a **Pyronin Y low / Hoechst 2N** (G0 verified, not inferred). 4 h maximum sort-to-transduction window.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 104,
+      "line": "- **Minimal-cytokine, short-exposure:** SCF 25 ng/mL alone, 2 h pre-transduction, 6 h transduction, wash to zero cytokines for 4 h, then full cocktail.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 105,
+      "line": "- **LTC-IC assay (5-week readout):** long-term culture-initiating cell frequency on MS-5 stroma \u2014 the *in vitro* proxy for long-term repopulating activity that has the cleanest correlation with NSG engraftment (Pearson r \u2248 0.7 in our historical data vs. r \u2248 0.3 for 14-day CFU).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 106,
+      "line": "- **CFU-GEMM (14-day):** multi-lineage colony output, scored blind.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 107,
+      "line": "- **n=3 donors \u00d7 2 sources (mPB + cord blood)**, 4 biological replicates each. **Not throughput-optimized \u2014 this is a top-hits bridge.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 108,
+      "line": "- **NSG serial transplant (top 2 only):** 16-week primary, then 16-week secondary. 12 mice/variant \u00d7 2 variants \u00d7 2 arms = 48 mice. Single endpoint. Runs in parallel to Stage 3+ wet-lab. Explicitly out of the AL loop, per Stage 0 QA mandate.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 120,
+      "line": "**Verdict: signal-to-noise is sufficient for a low-N active-learning loop with n=3 biological replicates per variant and enforced donor normalization.** Tier 3 LTC-IC is deliberately outside the loop because its CV is too high; it serves as a bridge, not a training signal.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 127,
+      "line": "- Producer titer: **1\u00d710\u2077 TU/mL** raw (generous midpoint of 5\u00d710\u2076\u20133\u00d710\u2077).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 128,
+      "line": "- G0 CD34\u207aCD38\u207bCD90\u207a transduction at MOI 10, 4 h cytokine: **~15%** (midpoint of 10\u201320%).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 129,
+      "line": "- Producer viability: **~45%** at 48 h.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 132,
+      "line": "- Producer titer: VSV-G routinely hits 3\u00d710\u2078 TU/mL raw in the same producer \u2014 that is the practical biological ceiling. **Headroom: 30\u00d7.** Not saturated.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 133,
+      "line": "- G0 transduction: theoretical max = 100%. Observed ceiling in *cycling* CD34\u207a with BaEV is 70\u201380%. Achievable G0 ceiling is probably **60\u201370%** (some G0 cells are simply refractory regardless of envelope). **Headroom: 4\u20135\u00d7.** Not saturated.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 134,
+      "line": "- Producer viability: ceiling is ~95% (matches VSV-G baseline). **Headroom: 2\u00d7.** Modest.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 135,
+      "line": "- Thermostability: cocal-G is ~3\u00d7 more stable than VSV-G post-concentration; a detoxified BaEV should match. **Headroom: 3\u20135\u00d7.** Open.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 137,
+      "line": "**Compound headroom (titer \u00d7 G0 txn \u00d7 viability) on fitness: ~50\u2013100\u00d7.** This is closer to the T7 RNAP case (500\u00d7) than the Bxb1 case (2\u20134\u00d7). **Not saturated. Not even close.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 139,
+      "line": "**Bxb1 comparison disqualified:** the memo should not use Bxb1 as the analog. BaEV Rless is natural baboon germline, never engineered for HEK293T producers, never affinity-matured against human ASCT2, and crudely edited on one terminus. It resembles pre-engineering T7 RNAP far more than Bxb1.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 160,
+      "line": "**Context Risk Verdict: MANAGEABLE WITH THE THREE-TIER DESIGN.** If any one of these mitigations is dropped \u2014 in particular the donor-normalized mPB primary assay or the serum-free producer \u2014 the campaign will generate beautiful data that does not replicate in a Vertex or 2seventy PD lab, and the platform dies on first customer evaluation.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 168,
+      "line": "- **Round cadence:** ~2 weeks per Tier 2 cycle (60 variants/round).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 169,
+      "line": "- **Rounds per year:** 6\u20138 (allowing holidays, donor scheduling, QC failures).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 170,
+      "line": "- **Variants through Tier 2 per year:** 360\u2013480.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 171,
+      "line": "- **Tier 1 filter ratio:** ~5\u201310\u00d7 (enter 300\u2013500/round into Tier 1, advance top 60 to Tier 2).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 172,
+      "line": "- **Tier 3 bridge:** 2\u20133 variants per quarter, total ~10 over 12 months.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 173,
+      "line": "- **NSG:** 2 variants over 12 months, late.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 175,
+      "line": "This is consistent with the EVOLVEpro T7 RNAP run (~4 rounds, ~70 variants/round) and should deliver **50\u2013100\u00d7 composite fitness gain** within 12 months if the target's headroom claim holds.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 177,
+      "line": "**Budget risk:** mPB donor apheresis product at clinical grade runs ~$8K\u2013$12K per unit, yields ~1\u00d710\u2078 CD34\u207a, sufficient for ~200 variants at n=3. Annual consumables for Tier 2: **~$0.6\u20131.2M** for cells alone, plus flow reagents, ddPCR, lentiviral prep \u2014 call it **$2\u20133M/year on assay consumables.** If the budget does not support this, switch cord blood + mPB 50/50 to cut costs ~40%, accepting the context risk noted above.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 183,
+      "line": "1. **No p24 ELISA as the titer measurement for AL training.** Physical particles \u2260 infectious particles. p24 is acceptable only for normalization sanity checks.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 184,
+      "line": "2. **No HEK293T or HCT116 transduction data as a surrogate for G0 HSC transduction.** Ever. In the AL loop.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 185,
+      "line": "3. **No n=1 or n=2 replicates.** n=3 minimum, with three different donors for Tier 2.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 186,
+      "line": "4. **No fresh-CD34\u207a data.** Cryopreserved only.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 187,
+      "line": "5. **No DMEM+FBS producer context.** Serum-free Expi293 from round 1.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 188,
+      "line": "6. **No 24\u201348 h prestim protocol.** 4 h maximum single-cytokine.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 189,
+      "line": "7. **No NSG engraftment in the AL loop.** 16-week readouts, 30\u201340% CV \u2014 confirmatory only, per Stage 0 QA.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 190,
+      "line": "8. **No gating at CD34\u207aCD38\u207bCD90\u207a.** Must include CD45RA\u207b and CD49f\u207a to enrich LT-HSC.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 191,
+      "line": "9. **No training on variants that read onto the G\u00e9n\u00e9thon tail-truncation literal claim** (FTO gate from Stage 1 QA \u00a71 \u2014 binary multiplier in the fitness scalar).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 214,
+      "line": "Move to Stage 3. Deliver the library design, mutagenesis strategy, and the ML-loop architecture with the Tier 2 primary assay as the fitness signal. Budget scientist time for donor coordination \u2014 that will be the rate-limiting operational step, not the liquid handling.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

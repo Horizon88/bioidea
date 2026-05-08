@@ -1,0 +1,655 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage5_main.md",
+  "total_lines": 252,
+  "scanned_lines": 83,
+  "factual_bullet_count": 43,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 43,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 28,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-24",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Subject:** Execution roadmap, 5-round AL campaign against BaEV-Rless envelope. Week-by-week. Vendor-locked. Budget-capped.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 35,
+      "line": "Stage 4 QA signed off 2026-04-24 (Friday). Week 1 begins **Monday 2026-04-27**. The blueprint (Stage 3) specified 6\u20138 rounds at 60 Tier 2 variants/round; Stage 3 QA revised the objective function and added safety terms; Stage 4 QA appended a FastRelax step, a 15 \u00c5 glycan-check trigger, and a \"functional-rescue override\" schema. **I am compressing the blueprint to 5 AL rounds inside a 12-month campaign** because (a) mPB donor apheresis is the rate-limiter, not liquid handling, and (b) the Round-3 bridge gate (Bridges A\u2013D) is the real decision point \u2014 if we survive it, 2 more rounds of refinement are enough; if we don't, a 6th round doesn't save us.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 43,
+      "line": "**Week 1 = Mon 2026-04-27. Campaign end = Fri 2027-04-23 (Week 52).** NSG secondary transplant endpoint falls Week 52 \u00b1 2.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 59,
+      "line": "- **Donor apheresis slippage** (AllCells/HemaCare reschedules): 1\u20132 weeks/occurrence, ~30% probability per round. Mitigation: 2-donor pre-contract buffer.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 60,
+      "line": "- **IACUC resubmission** if protocol needs amendment (probability ~40% on first submit): 3\u20134 week delay. Mitigation: pre-consultation with IACUC chair W0.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 61,
+      "line": "- **Twist clonal gene failures** (repeat-rich env sequences fail synthesis ~8\u201312% of the time): re-order at +10 business days. Mitigation: budget 10% over-order; split to IDT for failed sequences.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 67,
+      "line": "**Total Tier 2 variants over 5 rounds: 300. Plus ~150 B-list on Tier 1 only. Plus WT replicates. Plus confirmation n=5 donor panels on top 10/round.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 79,
+      "line": "**Why Medium-N (60) not Low-N (~20):** Low-N at n=3 donors \u00d7 20 variants = 60 data points/round is below the stable regime for regression-style AL on a scalar with 10\u201312% CV and multi-term objective. EVOLVEpro T7 RNAP plateau is at ~50 variants/round. Going lower trades $400K/year in assay savings for 2 extra AL rounds (~12 weeks) of slower convergence \u2014 bad math on a 12-month clock.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 81,
+      "line": "**Why 5 rounds not 7:** Round 3 is the bridge gate. If R3 passes, diminishing returns on the AL loop set in by R5 \u2014 the protein is a ~600 aa target, and by R5 the model has seen ~300 labeled variants + bridge data, enough to converge. If R3 fails, we don't run rounds 4\u20137; we pivot scaffold. Budgeting for 7 rounds invites scope creep.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 87,
+      "line": "**Lock-in decisions made W0; change orders after W4 require PI sign-off.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 97,
+      "line": "**Assembly strategy:** **Golden Gate (BsaI/BsmBI) with a pre-qualified acceptor backbone** holding Gag-Pol + transfer plasmid + BFP reporter. Each variant = one Golden Gate reaction from 3\u20134 eBlock fragments. In-house, 2-day turnaround from fragment receipt to sequence-verified clone at 96-well scale. Two research associates own this workflow. Cloning success rate target \u226585%; below that triggers fragment re-order.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 100,
+      "line": "**In-house.** HEK293T/17 transient triple transfection in serum-free Expi293 medium (per Stage 2 mandate). 24-well adherent for Tier 1 (~2 mL supernatant); T75 flask for Tier 2 (~15 mL, concentrated 20\u00d7 by TFF to ~5\u00d710\u2078 particles/mL concentrated). Outsourcing LV packaging at this volume is 3\u20135\u00d7 our unit cost and adds 2-week CRO lag per round. No.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 103,
+      "line": "**Primary: in-house GPU cluster** (4\u00d7 A100 nodes, already budgeted). AF3 multimer, ESMFold, FoldX, Rosetta FastRelax + ddg_monomer + InterfaceAnalyzer. **Backup / overflow: Cradle or Charm** on a per-variant basis ($40\u201380/variant) for round-end surges where in-house queue >48 h. Budget $150K overflow.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 114,
+      "line": "**Donor pre-commitment:** **Contract AllCells for 18 standard mPB units across W6\u2013W30 on a forward calendar** with 4-week cancellation window. This is critical \u2014 mPB donors are booked on a first-come basis and a last-minute 2-week delay blows a round cadence.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 117,
+      "line": "**Jackson Laboratory NSG-SGM3** (stock #013062, supports human myeloid engraftment) \u2014 48 mice total, ordered in 3 cohorts of 16 at W24, W26, W28 to match R5 readout. 4-week lead time from Jackson at this volume; pre-book W8. Vivarium: in-house if HSC work is already authorized; otherwise The Jackson Laboratory IVIS or local ABSL-2 CRO (In Vivo Services, Charles River ABSL-2). Budget $350/mouse purchase + $8/day husbandry \u00d7 140 days avg \u00d7 48 mice = ~$56K husbandry + $17K purchase = **$73K total**, plus flow reagents and IHC.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 123,
+      "line": "**Substrate: cryopreserved mobilized peripheral blood CD34\u207a (AllCells) as the Tier 2 AL training substrate. Cord blood is BANNED from the training loop per Stage 2 NO-GO list.** Patient substrates (SCD, MDS, aged) enter at Bridge A only.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 126,
+      "line": "- Tier 2 primary assay: 1\u00d710\u2074 CD34\u207a/well, 96-well plate format, n=3 wells/donor, 3 donors = **9\u00d710\u2074 cells/variant**.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 127,
+      "line": "- Top-10 confirmation panel: +2 donors \u00d7 3 wells \u00d7 1\u00d710\u2074 = +6\u00d710\u2074/variant, applied to top 10 only.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 128,
+      "line": "- Per round: 60 variants \u00d7 9\u00d710\u2074 + 10 \u00d7 6\u00d710\u2074 = **6\u00d710\u2076 cells + controls/WT reps + bridge spillover \u2248 1\u00d710\u2077 cells**.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 129,
+      "line": "- **One AllCells mPB unit (1.5\u00d710\u2078 CD34\u207a) covers ~12 rounds of Tier 2 at that density**, but because of donor rotation rules (no donor in >2 consecutive rounds) and n=3 donors/round, we consume units faster \u2014 budget **3 fresh AllCells units per round** \u00d7 5 rounds = **15 units**, plus the R0 qualification consuming 3 units, plus 3 bridge-A units (SCD + aged), plus a 2-unit buffer. **Total: ~22 AllCells units + 3 SCD + 3 MDS + 3 aged.**",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 132,
+      "line": "- Post-thaw viability \u226580% (7-AAD flow).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 133,
+      "line": "- CD34\u207a purity \u226592% after 2 h rest.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 134,
+      "line": "- Colony-forming assay on a 5% aliquot: CFU-GEMM frequency \u22651/2000 CD34\u207a.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 136,
+      "line": "- Any vial failing any gate: **returned to AllCells for replacement** (typically honored within 2 weeks).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 138,
+      "line": "**Donor batching rule:** a given AL round uses 3 donors, each donor run on the **same producer batch day** as its matched same-donor WT control (per Stage 3 QA Control Mandate \u00a73). Plate maps are locked by the biostats lead W-1 of each round; no last-minute reshuffling.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 140,
+      "line": "**Donor panel rotation:** 9 unique donors across R1\u2013R3 (no overlap), 6 additional unique donors across R4\u2013R5 (no overlap with R1\u2013R3). **Total unique healthy-donor identities: 15**, plus 3 SCD, 3 MDS, 3 aged at Bridge A. This is what kills the donor-lottery cheat.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 146,
+      "line": "**IACUC submission: W1 (Mon 2026-04-27). Pre-submission consultation with IACUC chair: W0 Friday 2026-04-24.** Anticipated approval window: 6\u201310 weeks. Approval **required by W10** to protect the W24+ transplant schedule \u2014 any slip and the NSG bridge moves out of the campaign window.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 149,
+      "line": "- **Strain:** NSG-SGM3 (NOD.Cg-Prkdc\u02e2\u1d9c\u2071\u1d48Il2rg^tm1Wjl Tg(CMV-IL3,CSF2,KITLG)1Eav/MloySzJ, JAX #013062). Supports myeloid and erythroid reconstitution, which VSV-G-transduced human CD34\u207a typically fails to produce robustly in plain NSG \u2014 relevant for the lineage-bias safety term (Stage 3 QA Safety #2).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 150,
+      "line": "- **Conditioning:** sublethal busulfan 20 mg/kg IP (age-matched cohorts).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 151,
+      "line": "- **Cells/mouse:** 5\u00d710\u2075 transduced human mPB CD34\u207a (pooled from 2 donors to reduce donor-specific engraftment variance), injected retro-orbitally or tail-vein.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 152,
+      "line": "- **Arms:** 5 candidate variants + 1 WT Rless + 1 VSV-G positive control + 1 untransduced negative = **8 arms \u00d7 8 mice = 64 mice.** We budget 48 earlier because not all arms go to secondary; revised to **56 mice** for primary + 24 for secondary = **80 total**. (This is a budget upward revision from Stage 3's ~48; the lineage-bias term and multi-arm positive/negative controls force it. Documented.)",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 153,
+      "line": "- **Primary readout W46** (16 weeks post-transplant): human CD45\u207a chimerism in peripheral blood, bone marrow, spleen; lineage breakdown (CD3, CD19, CD33, CD71/GPA, CD41); VCN in sorted BFP\u207a bone marrow CD34\u207a; integration site profile (Bridge G, top 2 only).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 154,
+      "line": "- **Secondary transplant W46\u2013W47:** bone marrow from top 3 primary arms (5 donors \u2192 5 recipients per arm = 15 secondary mice + 5 WT controls = 20 secondary). 16-week readout lands **W62**, outside campaign closeout \u2014 that's a Stage 6 deliverable.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 156,
+      "line": "**Protocol amendments budgeted** for lineage analysis expansion \u2014 file as addendum at W12 to avoid resubmission delay.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 164,
+      "line": "- Top variant TXN_G0 fold-change <1.5\u00d7 WT on donor-normalized Tier 2.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 165,
+      "line": "- Top-10 mean F(v) <+0.25 log2.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 166,
+      "line": "- FTO gate pass rate across R1 library <40%.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 167,
+      "line": "- Tier 1 titer \u2194 Tier 2 G0 Spearman \u03c1 outside [\u22120.2, +0.5].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 168,
+      "line": "- Tier 2 CV on WT technical controls >12% donor-normalized.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 170,
+      "line": "**SOFT HOLD (one failing):** 4-week diagnostic pause, no R2 library order, root-cause analysis.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 172,
+      "line": "**HARD STOP action:** scaffold pivot to **cocal-BaEV RBD chimera** (Stage 1 QA fallback). Campaign restart from R0 with new seed library. **Budget impact: +8 weeks, +$350K.** Decision locked by PI + board within 2 weeks of gate.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 176,
+      "line": "- Spearman \u03c1(healthy-donor fitness \u2194 SCD-donor fitness) <0.7 on top 10 AND retraining with bridge-A sample weights at 25% does not rescue to \u03c1 \u22650.7 within 2 weeks.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 177,
+      "line": "- Top variant shows >3\u00d7 titer drop when packaged with 7.5 kb therapeutic-proxy cassette (Bridge B).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 178,
+      "line": "- Top 10 rank-inverts (Spearman \u03c1 <0.5) between 21% and 3% O\u2082 (Bridge C) AND a hypoxia arm cannot be integrated into R4.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 179,
+      "line": "- Expi293F producer line (Bridge D): titer drops >3\u00d7 vs. HEK293T/17 OR complement inactivation >50% in 50% human serum OR N-glycan MS shows Gal-\u03b1-1,3-Gal or Neu5Gc motifs.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 185,
+      "line": "- No variant achieves **TXN_G0 \u226550% on donor-normalized Tier 2** OR **composite F(v) \u2265+2.0 log2** (i.e., ~4\u00d7 composite improvement).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 186,
+      "line": "- Top 5 variants show Ki-67 ratio >1.3\u00d7 WT in BFP\u207a LT-HSC fraction (activation-biased false winners; Stage 3 QA Safety #1).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 187,
+      "line": "- Any top-5 variant shows myeloid:erythroid:lymphoid CFU ratio |log2 fold-change| >1 vs. WT (lineage bias; Safety #2).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 188,
+      "line": "- LTC-IC frequency in BFP\u207a fraction <0.6\u00d7 untransduced same-donor (engraftment-quality gate; Safety #3).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 189,
+      "line": "- VCN per cell >2 at MOI 10 across top 5 (FDA safety threshold; Safety #4).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 190,
+      "line": "- Bridge G integration site enrichment at LMO2/MDS1-EVI1/HMGA2 hotspots >2\u00d7 VSV-G baseline.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 192,
+      "line": "**HARD STOP action:** do not file lead composition-of-matter; do not transfer to Stage 6. Extend campaign by 1 refinement round with revised fitness weighting. Budget impact: +6 weeks, +$280K, one-shot.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 198,
+      "line": "**All-in campaign budget, W1\u2013W52:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 219,
+      "line": "**Budget vs. Stage 3 prediction:** Stage 3 estimated $2\u20133M assay + $600\u2013800K bridge = $2.6\u20133.8M. We land at **$2.65M all-in**, favorably inside the envelope. The FTE line is the swing variable \u2014 if the company already has an HSC gene therapy team, the FTE line drops to $0 incremental and campaign comes in at $1.9M.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 221,
+      "line": "**Cap on variant synthesis: 500 variants total across R0\u2013R5 (300 Tier 2 + 150 B-list + 50 WT/qualification/reorder).** Any ask above this requires board re-authorization.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 228,
+      "line": "- **If IACUC takes >10 weeks**: NSG bridge (Bridge F) moves out of campaign window. Mitigation: file draft W-1 with pre-consultation; nothing else we can do.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 229,
+      "line": "- **If Stage 3 QA weights were themselves wrong** (objective function still has a loophole we didn't see): we find out at Stage 6 when the lead variant fails in a Vertex PD lab. This plan does not protect against that; Stage 3 QA's job was to close it and mine is to execute what was approved.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 230,
+      "line": "- **Secondary NSG endpoint at W62** falls outside the campaign window. Stage 6 inherits it; lead nomination at W52 is conditional on primary 16-week data only.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 231,
+      "line": "- **The 5-round compression** (from 6\u20138 in Stage 3 to 5 here) bets that R3 bridge pass + 2 refinement rounds is enough. If R3 passes marginally, we may wish we had booked R6. The board-approval gate at R5 can extend +1 round (\u00a76 R5 action) but that's a one-shot, not a standing reserve.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 237,
+      "line": "Before W1 Monday launch:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 238,
+      "line": "- **IACUC** draft W0 Thursday, pre-consult W0 Friday, submit W1 Monday.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 239,
+      "line": "- **IBC** (BSL-2+ for lentivirus + human primary cells) submit W1 Monday. Institutional turnaround ~4 weeks.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 240,
+      "line": "- **Outside patent counsel** engaged W0 Friday, FTO opinion on G\u00e9n\u00e9thon family due W4.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 241,
+      "line": "- **Board approval** of budget, kill gates, and scaffold-pivot contingency fund ($350K held in reserve): required W0.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 242,
+      "line": "- **AllCells forward contract** for 18 mPB units signed W1 Tuesday.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 243,
+      "line": "- **Jackson Lab NSG-SGM3 cohort pre-book** (3\u00d7 16 mice at W24/W26/W28) signed W2.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 244,
+      "line": "- **Twist Enterprise pricing tier** confirmed W1.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 250,
+      "line": "**Roadmap locked. W1 launch 2026-04-27 is feasible conditional on Section 9 sign-offs by W0 Friday (2026-04-24 EOD).** Budget $2.65M; 5 AL rounds + 3 bridge-gate reviews + NSG primary readout inside 52 weeks; 300 variants in Tier 2, 500 total synthesized; 15 healthy donors + 9 patient donors + 80 NSG mice.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 252,
+      "line": "The schedule has two real single points of failure (mPB supply, IACUC) and one structural-biology-dependent kill gate at R3. Everything else is executable. Proceed to Stage 6 on R5 success.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

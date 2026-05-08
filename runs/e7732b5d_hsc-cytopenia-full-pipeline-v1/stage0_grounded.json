@@ -1,0 +1,111 @@
+{
+  "model": "opus",
+  "cost_usd": 0.13376725,
+  "duration_s": 42.55560349999723,
+  "tokens_in": 13,
+  "tokens_out": 3376,
+  "question": "What is BaEV's receptor on human HSCs, and what's the published evidence for its transduction efficiency on quiescent CD34+ cells?",
+  "sources": {
+    "e680a46f-849b-43e7-bb39-2d48f8a486d8": {
+      "source_system": "pubmed",
+      "external_id": "41591869",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41591869/",
+      "title": "Transduction of Quiescent Human Hematopoietic Stem and Progenitor Cells Using Lentiviral Vectors and Virus-Like Particles."
+    },
+    "cb6d178a-1059-4064-836f-db58103398f7": {
+      "source_system": "pubmed",
+      "external_id": "24951430",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24951430/",
+      "title": "Baboon envelope pseudotyped LVs outperform VSV-G-LVs for gene transfer into early-cytokine-stimulated and resting HSCs."
+    },
+    "4ec48e08-55f3-47f3-b2d1-d044ca3e88e8": {
+      "source_system": "pubmed",
+      "external_id": "23698741",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23698741/",
+      "title": "Characterization of a third generation lentiviral vector pseudotyped with Nipah virus envelope proteins for endothelial cell transduction."
+    },
+    "59fe1150-66ae-448d-a007-d122139ef727": {
+      "source_system": "pubmed",
+      "external_id": "19152374",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19152374/",
+      "title": "Targeted transduction of CD34+ hematopoietic progenitor cells in nonpurified human mobilized peripheral blood mononuclear cells."
+    },
+    "34ff7940-e6e4-48d6-b5e1-a2c16f3fce30": {
+      "source_system": "pubmed",
+      "external_id": "31037976",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31037976/",
+      "title": "Assessing the Impact of Cyclosporin A on Lentiviral Transduction and Preservation of Human Hematopoietic Stem Cells in Clinically Relevant  Gene Therapy Settings."
+    }
+  },
+  "status": "PASS",
+  "validator_version": "grounding-v0.1.0",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "BaEVRLess-pseudotyped vectors target the neutral amino acid transporters ASCT1 and ASCT2 on hematopoietic stem and progenitor cells.",
+      "citations": [
+        {
+          "passage_id": "e680a46f-849b-43e7-bb39-2d48f8a486d8",
+          "passage_hash": "0bdee89bf16cee34797d8b031cfbe088240d3b3319fef1f002991c8f533de376",
+          "verbatim_quote": "we use LV vectors and eVLPs pseudotyped with the modified baboon endogenous retroviral glycoprotein BaEVRLess, which targets the neutral amino acid transporters ASCT1 and ASCT2 on HSPCs"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "BaEVRLess-pseudotyped LV vectors achieve higher gene transfer efficiencies into freshly isolated or thawed unstimulated HSPCs than VSVg-pseudotyped LV vectors.",
+      "citations": [
+        {
+          "passage_id": "e680a46f-849b-43e7-bb39-2d48f8a486d8",
+          "passage_hash": "0bdee89bf16cee34797d8b031cfbe088240d3b3319fef1f002991c8f533de376",
+          "verbatim_quote": "This envelope enables immediate transduction of freshly isolated or thawed, unstimulated HSPCs with higher gene transfer efficiencies than those obtained with VSVg-pseudotyped LV vectors"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "A single low-dose application of BaEV-pseudotyped LVs under mild cytokine prestimulation resulted in up to 90% transduction of human CD34+ cells.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "Under mild cytokine prestimulation to preserve the HSC characteristics, a single BaEV-LV application at a low dose, resulted in up to 90% of hCD34(+) cell transduction"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Low-dose BaEV-LVs efficiently transduced up to 30% of quiescent human CD34+ cells, whereas high-dose VSV-G-LVs were insufficient.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "these new BaEV-LVs allowed, at low doses, efficient transduction of up to 30% of quiescent hCD34(+) cells, whereas high-dose VSV-G-LVs were insufficient"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "text": "BaEV-LV-transduced human CD34+ cells reconstituted NSG mice while maintaining high transduction levels across all myeloid and lymphoid lineages, including early progenitors, with the pattern confirmed or increased in secondary recipients.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "reconstitution of NOD/Lt-SCID/\u03b3c(-/-) (NSG) mice with BaEV-LV-transduced hCD34(+) cells maintained these high transduction levels in all myeloid and lymphoid lineages, including early progenitors. This transduction pattern was confirmed or even increased in secondary NSG recipient mice"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "text": "BaEV-pseudotyped LVs were generated as high-titer vectors that are resistant to human complement.",
+      "citations": [
+        {
+          "passage_id": "cb6d178a-1059-4064-836f-db58103398f7",
+          "passage_hash": "70de541fef9931f030a8268d8cc8fa711bd16be8017deabb1b1c58804457111b",
+          "verbatim_quote": "We generated here high-titer LVs pseudotyped with a baboon retroviral envelope glycoprotein (BaEV-LVs), resistant to human complement"
+        }
+      ]
+    }
+  ],
+  "narrative": ""
+}

@@ -1,0 +1,190 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/ecf89fac_grounding-demo/stage0_main.md",
+  "total_lines": 91,
+  "scanned_lines": 30,
+  "factual_bullet_count": 18,
+  "tagged_bullet_count": 5,
+  "untagged_bullet_count": 13,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 6,
+  "strong_tag_usage": 1,
+  "weak_tag_usage": 4,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 18,
+      "line": "**Persona:** Ruthless Biotech Venture Scout & IP Analyst. I do not care about Nature covers. I care about what makes a $2M sickle cell cure economically unviable outside of 30 academic medical centers. I'm hunting for a broken protein whose 50-100x improvement collapses a unit-economics barrier.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "- **Application:** Pseudotyping lentiviral vectors for **one-shot, short-incubation (\u226424h, ideally prestim-free) transduction of quiescent CD34+CD38\u2212CD90+ long-term HSCs** used in ex vivo gene therapy for sickle cell disease, \u03b2-thalassemia, CGD, WAS, ADA-SCID, and lentivector-delivered base/prime editors.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 33,
+      "line": "I am hunting for an **HSC-tropic lentiviral envelope that achieves \u226550% VCN\u22651 transduction of cytokine-na\u00efve, G0-arrested CD34+CD38\u2212 LT-HSCs at MOI \u226410 within a \u226424h incubation**, because every additional hour of SCF/TPO/FLT3L prestimulation drives HSCs out of quiescence, reduces bone-marrow homing, and measurably erodes long-term multilineage engraftment in NSG/NBSGW and in human patients [src: PMID:31471581, DOI:10.1038/s41591-019-0601-5]. BaEV-TR is the best available starting point \u2014 it already outperforms VSV-G on unstimulated HSCs \u2014 but its native titers on producer cells are **~10-100x below VSV-G**, it is cytotoxic in 293T packaging lines via ASCT1/ASCT2-mediated syncytia, and its transduction efficiency on true LT-HSCs still tops out around 10-25%. That is a \u22654x-performance, \u226510x-titer gap begging for directed evolution [src: DOI:10.1182/blood-2014-02-558163, DOI:10.1038/s41591-019-0601-5].",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 41,
+      "line": "- **Vertex/CRISPR \u2014 Casgevy (exa-cel):** list price $2.2M/patient; Vertex reports ~50 authorized treatment centers and throughput constrained by a 16-week manufacturing window dominated by CD34+ editing/expansion and QC [src: company:Vertex]. Non-viral electroporation side-steps envelopes but retains the quiescent-HSC editing-efficiency problem.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 42,
+      "line": "- **bluebird bio \u2014 Lyfgenia (lovo-cel, sickle) / Skysona (ALD) / Zynteglo (\u03b2-thal):** Lyfgenia list price $3.1M [src: company:bluebird]. bluebird's gross margins have been crushed by the CoG of VSV-G lentivirus manufacturing requiring **48-72h cytokine prestimulation** and resulting VCNs that still require \u22651e7 TU/mL drug product \u2014 bluebird's 2023 losses and ATM facility-dependency are a public tell [src: company:bluebird, PMID:31471581].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 43,
+      "line": "- **Sana Biotechnology (fusogen-pseudotyped LV platform):** explicitly built the thesis that envelope engineering is the chokepoint; SG299/Cocal/BaEV-family work underpins their in vivo CAR-T and HSC programs [src: company:Sana].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 44,
+      "line": "- **Editas (reni-cel/EDIT-301) and Beam (BEAM-101/102):** electroporation-based, but every program that wants to deliver a **base editor, prime editor, or large HDR template** to an HSC hits the same wall \u2014 AAV6 has payload/immunogenicity/integration issues and LV needs a non-genotoxic, prestim-free envelope to be viable for in vivo or one-shot ex vivo [src: DOI:10.1038/s41587-019-0325-6, clinicaltrials:NCT04853576].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 45,
+      "line": "- **CoG math:** VSV-G LV manufacturing runs $500k-$1M+ per patient dose at current titers (~1e7 TU/mL after concentration, ~30% recovery through TFF) [src: estimate]. A 10x envelope-titer improvement plus elimination of 48h prestim collapses both upstream LV CoG and the apheresis\u2192infusion clock \u2014 a direct hit on the $2-3M sticker price and the 50-center access ceiling.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 53,
+      "line": "**MED.** A prestim-free, high-efficiency HSC-transducing envelope directly enables in vivo and ex vivo delivery of longevity-relevant payloads (TET2/DNMT3A/ASXL1 correction in CHIP clones, telomerase/TERT modulation, p16/Cdkn2a knockdown in aged HSCs, epigenetic reprogramming cassettes) that today cannot be delivered to true LT-HSCs without exhausting them. It is not itself a rejuvenation molecule, but it is the **delivery rail** for every serious HSC-rejuvenation thesis, which is why MED not LOW [src: reasoning].",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 61,
+      "line": "- **Transduction of unstimulated/quiescent CD34+CD38\u2212CD90+ LT-HSCs:** ~10-25% VCN\u22651 at MOI 10-50, substantially better than VSV-G (<5% on truly unstimulated LT-HSCs) but nowhere near the \u226550% VCN\u22651 needed for mono-allelic correction of sickle/\u03b2-thal without prestim [src: DOI:10.1182/blood-2014-02-558163, DOI:10.1038/s41591-019-0601-5].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 62,
+      "line": "- **Producer-cell titer (293T, unconcentrated):** ~1e6 to 1e7 TU/mL, vs 1e7-1e8 TU/mL for VSV-G; BaEV SU forms syncytia with ASCT1/ASCT2-expressing producer cells, limiting run durations and triggering producer apoptosis [src: DOI:10.1182/blood-2014-02-558163, patent:WO2013045639A1].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 63,
+      "line": "- **Thermostability / half-life on vector:** BaEV-pseudotyped LV decays faster than VSV-G LV at 4\u00b0C and cannot be ultracentrifuge-concentrated as aggressively (~3-5x loss) [src: estimate].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 65,
+      "line": "**Why >10x headroom is real:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 66,
+      "line": "1. The functional surface under selection is small and modular \u2014 the RBD of a gamma-type retroviral env is a classic EVOLVEpro/deep-mutational-scanning substrate, and prior envelope-engineering campaigns (cocal, measles-H mutants, Sana's fusogens) have shown 5-50x titer/tropism gains from point mutations [src: patent:WO2013045639A1, company:Sana].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 67,
+      "line": "2. BaEV's syncytia/cytotoxicity is driven by a handful of residues at the SU/TM interface and fusion peptide \u2014 directly tunable [src: DOI:10.1182/blood-2014-02-558163].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 68,
+      "line": "3. The ASCT2 receptor is expressed on quiescent HSCs [src: PMID:9653161] but current WT BaEV engagement is affinity-limited; Kd improvement translates ~linearly into transduction of low-receptor-density G0 cells [src: reasoning].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 69,
+      "line": "4. No competing envelope has displaced BaEV-TR in 10+ years of academic benchmarking \u2014 the field has frozen, which for a scout means the headroom has been *inherited* not consumed [src: reasoning].",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 71,
+      "line": "**Target specs for an evolved BaEV (\"BaEV-v2\"):**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 91,
+      "line": "**Scout's verdict:** We hunt BaEV-TR. The envelope is load-bearing for a $5B+ gene-therapy segment, it is objectively broken (low titer, cytotoxic, insufficient G0 potency), the IP is 10+ years old and mostly Cosset/INSERM-licensed with clear whitespace for engineered mutants, and a 10x titer + 3-5x G0-transduction combination is a single-molecule catalyst for collapsing the $2-3M sticker price of ex vivo HSC gene therapy [src: reasoning].",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {
+    "DOI": 1,
+    "estimate": 4
+  }
+}

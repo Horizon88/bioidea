@@ -1,0 +1,250 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage3_main.md",
+  "total_lines": 206,
+  "scanned_lines": 31,
+  "factual_bullet_count": 4,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 4,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 22,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Target:** BaEV-Rless envelope glycoprotein (parent UniProt Q9WJT4) \u2014 directed evolution for quiescent-HSC lentiviral transduction",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 35,
+      "line": "**Project QUIESCO-1** \u2014 *QUIescent-HSC Envelope Specification & Commercial Optimization, Round 1.*",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "Mandate: deliver a BaEV-derived envelope variant achieving \u226550% transduction of true-G0 CD34\u207aCD38\u207bCD45RA\u207bCD90\u207aCD49f\u207a mPB HSCs at MOI \u226410, with \u22651\u00d710\u2078 TU/mL raw producer titer in serum-free Expi293, <10% producer syncytia, and \u226512 non-conservative substitutions in SU/TM outside the R-peptide, within 14 months and \u2264$4M all-in.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 43,
+      "line": "The AL loop optimizes a **single scalar** `F(v)` per variant `v`, computed per round on Tier 2 data (donor-normalized), with Tier 1 serving as a pre-gate filter and Bridge assays (Stage 2 QA) serving as rank-validators at specified rounds.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "Each additive term is a **log2 fold-change** on a donor-normalized, WT-Rless-anchored basis \u2014 not a raw fraction. Log-space keeps the gradient well-behaved across 30\u00d7 dynamic range on titer and 4\u00d7 on G0, and makes the weights commensurable.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 71,
+      "line": "`\u03bb_sub = 0.25`; VCN per cell >3 on Tier 2 bulk is penalized quadratically. This blocks the \"mutate the genome to win\" pathological regime where a variant achieves high %BFP\u207a by delivering 5\u201310 integrations per cell \u2014 clinically disqualifying (insertional mutagenesis risk, bluebird-Lyfgenia-class AML concern).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 96,
+      "line": "Weights were chosen so that **any single axis doubling (log2 = 1)** contributes to fitness in proportion to its commercial value; a 10\u00d7 titer improvement contributes +1.0 to F, a 3\u00d7 G0 improvement contributes +0.55. This keeps the easiest-to-move axis (titer) from dominating the scalar and starving the hardest-to-move axis (G0 HSC).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 102,
+      "line": "To be locked before Round 1 begins, via a **20-replicate Tier 1 run + 9-donor Tier 2 run on parental WT BaEV-Rless** across three independent manufacturing days. Current best-estimates from literature + internal historical (to be confirmed and treated as provisional until the lock-in run):",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 112,
+      "line": "**Rule:** the Round-0 WT characterization run is a **hard gate**. If measured WT `TXN_G0` is <8% or >25% on our Tier 2 SOP, the SOP is not ready \u2014 do not start the AL loop. This has bitten every academic BaEV campaign that skipped the baseline-lock step.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 122,
+      "line": "- **Tier 2 cost per variant:** ~$1,800 (mPB CD34\u207a allocation + cytokines + flow + ddPCR + labor). 60 variants/round \u00d7 6\u20138 rounds = 360\u2013480 variants/year @ ~$650K\u2013$870K in Tier 2 alone, plus Tier 1 (~$200/variant \u00d7 ~3,000/year \u2248 $600K).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 123,
+      "line": "- **Tier 2 CV 10\u201312% donor-normalized** is adequate for regression-style AL training at **n=3 donor biological replicates**. Dropping to Low-N (~16/round) saves ~$400K/year but **starves the ML model** \u2014 EVOLVEpro and ESM-based AL models show monotonic performance gains up to ~50 variants/round and then plateau; 16/round sits on the unstable left flank of that curve.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 124,
+      "line": "- **Time per round:** 2 weeks including Tier 1 triage (Days 1\u20135), Tier 2 transduction (Days 6\u20138), Day 7 readout (Day 15), ML retraining + next-round library design (Days 15\u201320). Achieves **6\u20138 rounds in 14 months** including bridge gates.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 125,
+      "line": "- **Not Medium-High (~96/round):** primary bottleneck is mPB donor apheresis scheduling, not liquid handling. Three donors per round at n=3 donors \u00d7 60 variants \u00d7 1\u20132\u00d710\u2074 cells/well consumes ~3\u00d710\u2077 CD34\u207a, which is one apheresis unit at 30% of yield. Going to 96/round requires 2 apheresis units/round \u2192 donor scheduling risk dominates.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 133,
+      "line": "The campaign is killed \u2014 or the seed library is scrapped and rebuilt \u2014 if **any** of the following is true after Round 1:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 143,
+      "line": "Any two of these failing \u2192 **HARD ABORT**, library redesign, 4\u20136 week timeout. Any one failing \u2192 **SOFT HOLD**, single-round diagnostic before R2 launches.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 149,
+      "line": "The Stage 2 QA added seven bridges (A\u2013G). Integration into QUIESCO-1 cadence:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 162,
+      "line": "**Total rounds:** 6\u20137. **Total duration:** 14 months (12 AL + 2 bridge timeline). **Platform provisional filing target:** 2026-06-22 (before R1 data), anchored on position classes + ML method disclosure per Stage 1 \u00a75. **Lead composition provisional filing:** 2027-02 (post-R5, pre-NSG readout).",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 171,
+      "line": "Classic HSC failure: a variant that transduces G0 cells better because it mildly activates them (pushing G0 \u2192 G1). This **kills long-term repopulation** \u2014 the Graphite Bio and early bluebird failure mode.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 173,
+      "line": "**Guardrail:** Bridge A (aged/SCD substrate) and Bridge F (NSG secondary transplant) both include a **Day 7 Ki-67 intracellular flow measurement on BFP\u207a HSCs**. Any variant pushing Ki-67\u207a fraction >1.3\u00d7 WT in its BFP\u207a fraction is flagged as an **activation-biased false winner** and dropped from lead nomination regardless of F(v) score. Additionally, R5 introduces an explicit term `\u22120.15 \u00b7 log2(Ki67_ratio_v/WT)` into F for the last two rounds.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 176,
+      "line": "Addressed by the `\u03bb_sub \u00b7 max(0, VCN\u22123)\u00b2` penalty in \u00a72.1. A variant hitting VCN=6 loses ~2.25 fitness points \u2014 more than enough to wipe a 4\u00d7 G0 win.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 179,
+      "line": "`M_immuno` gate (\u00a72.2) runs in silico on every variant **before** it enters the wet lab \u2014 cost is negligible, filter is permissive enough to not dominate library design. Stage 5/6 will add ex vivo PBMC assays on final leads, but these are too expensive/slow for the AL inner loop.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 182,
+      "line": "`M_FTO` forces \u226512 non-conservative SU/TM substitutions. To prevent the ML from satisfying this with 12 cheap surface-exposed neutral mutations, the R5 fitness function adds a secondary constraint: **at least 4 of the 12 required substitutions must fall in high-information-content regions** \u2014 RBD contact residues (per AlphaFold3 BaEV-SU/ASCT2 complex prediction), TM heptad repeats, or the fusion peptide. This aligns FTO escape with functional engineering.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 204,
+      "line": "**Proceed to Stage 4 (wet-lab execution: library design, producer infrastructure, assay SOPs, AL orchestration).** The blueprint above is the full specification needed to build the seed library and start R0. Do not deviate from the fitness equation between rounds without a board-level re-weighting decision \u2014 mid-campaign weight drift is the single most common way these loops silently optimize the wrong thing.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 206,
+      "line": "The equation is written. The AI will maximize it. Make sure we wrote it right, because in 14 months we will have exactly what we asked for.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}

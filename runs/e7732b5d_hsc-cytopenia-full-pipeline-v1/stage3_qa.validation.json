@@ -1,0 +1,754 @@
+{
+  "file": "/Users/fujipeanutbutter/bioidea/runs/e7732b5d_hsc-cytopenia-full-pipeline-v1/stage3_qa.md",
+  "total_lines": 236,
+  "scanned_lines": 92,
+  "factual_bullet_count": 29,
+  "tagged_bullet_count": 0,
+  "untagged_bullet_count": 29,
+  "malformed_tag_count": 0,
+  "numeric_prose_warnings": 53,
+  "strong_tag_usage": 0,
+  "weak_tag_usage": 0,
+  "status": "FAIL",
+  "findings": [
+    {
+      "line_no": 26,
+      "line": "**Run:** HSC-cytopenia full pipeline v1",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 27,
+      "line": "**Date:** 2026-04-22",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 29,
+      "line": "**Subject:** Adversarial audit of the QUIESCO-1 fitness equation. The AI is a hostile optimizer; treat it as such.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 37,
+      "line": "The blueprint is the most thoughtful fitness equation I have seen come out of a Stage 3 in this pipeline. It correctly multiplies by FTO, ASCT1, and immunogenicity gates; it correctly penalizes over-integration; it correctly weights G0 transduction over titer. **It is also gameable in at least seven specific, testable ways**, four of which produce variants that look spectacular on the primary fitness scalar and **fail catastrophically on long-term engraftment, lineage balance, or insertional safety** \u2014 exactly the failure modes that killed Graphite Bio, dragged bluebird's MDS/AML signal into a clinical hold, and made FDA stop trusting bulk VCN as a sufficient safety endpoint.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 39,
+      "line": "The single biggest unforced error: **the Ki-67 activation guardrail and the engraftment-quality signal are deferred to R5/R6 bridges.** By then the AI has been trained on four rounds of data that systematically reward \"variants that mildly cycle G0 cells into G1.\" That is not a guardrail. That is a four-round delay before you discover the AI has been optimizing the wrong objective the entire time.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 41,
+      "line": "Fix the seven loopholes below before Round 1 launches. The cost is one term added to the primary scalar, one term added at R3 not R5, and a tightening of the donor-pairing rule. Total impact: ~$80K incremental assay spend, no schedule slip. Failure to fix them: 18 months and ~$3M into a campaign whose winners will not survive an LTC-IC review at a Vertex BD meeting.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 48,
+      "line": "**The mechanism:** TXN_G0(v) is %BFP\u207a within the CD34\u207aCD38\u207bCD45RA\u207bCD90\u207aCD49f\u207a gate on Day 7. Surface markers are not behavior \u2014 they are static phenotype. A variant that modestly activates the cell (G0 \u2192 G1 transit) will:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 49,
+      "line": "- Transduce 2\u20133\u00d7 better (cycling cells admit lentivirus more easily; reverse transcription requires nucleotide pools);",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 50,
+      "line": "- **Retain the surface marker gate** for at least 5\u20137 days because CD90/CD49f/CD45RA turnover is slow;",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 51,
+      "line": "- Score 0.35 \u00b7 log2(2.5) \u2248 +0.46 fitness, which beats almost every other axis.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 53,
+      "line": "The blueprint *acknowledges* this in \u00a78.1 and adds a `\u22120.15 \u00b7 log2(Ki67_ratio)` term at **R5 onward**. **This is four rounds too late.** Rounds 1\u20134 generate ~240 variants of training data already biased toward cycling-inducers. The ML model will learn \"high Ki-67 = high fitness\" because in the early rounds it is true. By R5 the model is path-dependent on the wrong signal.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 55,
+      "line": "**Why this is a real risk and not paranoia:** every academic BaEV paper that reported >25% G0 transduction has been independently shown to have cycled the input cells, including the Bernadin 2019 figures the blueprint anchors WT to. The biology *wants* to cheat here.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 57,
+      "line": "**Fix:** Move the Ki-67 penalty into the **primary fitness scalar from R1**, with a stronger weight (`\u22120.25 \u00b7 log2(Ki67_ratio_v/WT)`). Cost: one extra intracellular flow stain per Tier 2 variant ($8/well \u00d7 60 variants \u00d7 6 rounds \u2248 $3K total). Non-negotiable.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 60,
+      "line": "**The mechanism:** %BFP\u207a is a *fraction*. Fractions can be increased two ways: more numerator, or less denominator. A variant that is mildly cytotoxic to the **non-transduced (BFP\u207b)** subset of CD34\u207a \u2014 perhaps because residual envelope on the producer-cleared particle binds ASCT2 on bystander cells and triggers low-grade fusion-induced death \u2014 inflates the BFP\u207a fraction without transducing more cells.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 62,
+      "line": "The blueprint has no absolute-number term. It does not require **BFP\u207a cell count per input CD34\u207a** as a separate metric.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 64,
+      "line": "**Fix:** Add a co-primary readout \u2014 **absolute BFP\u207a LT-HSC count per 10\u2074 input CD34\u207a** \u2014 and require the fitness scalar to use the *minimum* of (a) %BFP\u207a fraction and (b) absolute count, both donor-normalized. This is robust against the surrogate-killer cheat. Already collected by the Stage 2 panel; only the scalar definition needs to change.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 67,
+      "line": "**The mechanism:** TITER(v) is measured by qPCR on **HCT116** indicator cells. HCT116 has a different ASCT2/ASCT1 expression ratio than primary CD34\u207a (HCT116 is ASCT2-dominant, ~10\u00d7 higher than HSCs; ASCT1 minimal). A variant that affinity-matures specifically against the HCT116 ASCT2 isoform (with HCT116-specific glycosylation) wins the titer term (weight 0.30, easily +1.0 fitness on a 10\u00d7 improvement) without improving \u2014 possibly while *degrading* \u2014 primary HSC binding.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 69,
+      "line": "The G0 term should pull this back, but the G0 assay has 10\u201312% CV and runs at MOI 10 (saturating); titer wins are easier and noisier-friendlier.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 71,
+      "line": "**Fix:** Cross-validate titer on **two indicator lines** \u2014 HCT116 (sensitivity, dynamic range) and a CD34\u207a-derived line (KG-1a or primary CD34\u207a MOI calibration). Take the geometric mean. Or: drop the indicator-line titer term to 0.20 and add a 0.10 weight on **MOI-normalized G0 efficiency at MOI 3**, which is sub-saturating and rewards true binding affinity.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 74,
+      "line": "**The mechanism:** PRODVIAB(v) is measured at **48 h** post-transfection. GMP harvest is **72\u201396 h**. A variant that delays cytotoxicity from 36 h (WT) to 60 h scores great on the 48 h readout but still kills producers before harvest at scale. The Bernadin 2019 failure mode the blueprint cites was specifically a 72 h failure mode.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 76,
+      "line": "**Fix:** Move PRODVIAB to a **72 h endpoint** (matches GMP harvest) and add a `tox_AUC` parallel readout \u2014 area under the cytopathic curve from 24\u201372 h via Incucyte. Cost: incremental imaging well-time, ~$15K total.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 79,
+      "line": "**The mechanism:** \"Donor-ratio-normalized to same-plate WT Rless\" is the right idea, but the blueprint does not specify that **WT and variant must run on the same donor's cells, not just the same plate.** Donor-to-donor BaEV transducibility variance is 1.5\u20132\u00d7. If a variant happens to be tested on three permissive donors and the WT control on three less-permissive donors *on the same plates* (because of how the plate map was filled), the variant is rewarded for donor lottery, not biology.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 83,
+      "line": "**Fix mandates (control mandate, see \u00a73 below):**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 84,
+      "line": "- WT Rless **on every plate**, **on every donor**, **n=3 wells per donor per plate**. Not \"in the same batch.\"",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 85,
+      "line": "- Each variant must be normalized to WT on the *same donor*, not the same plate average.",
+      "classification": "acronym_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "warn"
+    },
+    {
+      "line_no": 87,
+      "line": "- Donor rotation: no donor used in >2 consecutive rounds. Prevents AL loop from over-fitting to donor-specific ASCT2 polymorphisms (SLC1A5 has \u22654 common haplotypes in the population).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 89,
+      "line": "This single fix is worth more than every other adjustment combined. Without it, the kill threshold at R1 (top variant \u22651.5\u00d7 WT) is statistically meaningless \u2014 donor lottery alone will produce \u22651.5\u00d7 ratios in random variants ~15% of the time.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 92,
+      "line": "**The mechanism:** M_FTO requires \u226512 non-conservative substitutions in SU/TM outside R-peptide. The ML model will preferentially place these in **surface-exposed neutral positions** (loop regions, flexible termini) because those positions tolerate substitution without breaking function. The R5 fix (\"4 of 12 must be in RBD contact / heptad / fusion peptide\") is too late \u2014 by then the model has been trained for four rounds on the cheap-substitution strategy and the design distribution is locked in.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 94,
+      "line": "**Fix:** Move the high-information-residue constraint into M_FTO from R1: M_FTO = 1 iff \u226512 non-conservative substitutions outside R-peptide **AND \u22654 of those in {RBD contact residues per AlphaFold3 BaEV-SU/ASCT2, TM heptad repeats, fusion peptide}**. This is a binary gate, not a soft term \u2014 easy to enforce, no extra assay cost.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 97,
+      "line": "**The mechanism:** VCN_per_TU is in the equation with weight 0.05 as an \"anti-gaming\" term. But VCN_per_TU has its own pathology: a variant producing many fusion-defective particles inflates the *physical* particle count (would inflate p24 if measured) and suppresses the *infectious* TU. This *increases* VCN_per_TU artifactually if VCN is measured on bulk and TU on HCT116, because defective particles reduce TU but don't reduce delivered cassette mass.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 99,
+      "line": "The 0.05 weight is too low to be diagnostic and too low to penalize. It just adds noise.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 101,
+      "line": "**Fix:** Drop VCN_per_TU from the fitness scalar. Move it to a **diagnostic** that is logged but not optimized. If VCN_per_TU drifts >2\u00d7 across rounds, flag for investigation, but don't let it move the fitness needle.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 107,
+      "line": "**60 variants per Tier 2 round: ADEQUATE.** The blueprint's Medium-N justification is sound for the AL loop's information needs.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 109,
+      "line": "**n=3 donors per variant: BORDERLINE.** With donor-normalized CV of 10\u201312% and n=3 donors, the 95% CI on a single variant's fitness is approximately \u00b12.5 \u00b7 CV/\u221a3 \u2248 \u00b115\u201317% relative. The R1 kill threshold of \"top variant \u22651.5\u00d7 WT\" therefore has a CI that overlaps 1.25\u20131.75\u00d7 WT \u2014 meaning a variant scoring 1.5\u00d7 has only ~70% probability of truly being \u22651.3\u00d7.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 111,
+      "line": "**Fix (cheap):** n=3 donors for the bulk of 60 variants per round, **n=5 donors for the top 10 per round** (re-tested in a confirmation panel before they enter the next-round training data with full weight). Adds ~$20K/round, eliminates the donor-lottery false positives at the top of the rank.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 113,
+      "line": "**Epistasis risk:** the BaEV envelope is a multi-pass fusion machine with documented cooperativity between SU RBD, SU/TM cleavage site, TM heptad repeats, and fusion peptide. Single-residue scans will miss the productive epistatic combinations. The blueprint does not specify mutagenesis library design (deferred to Stage 4), but **Medium-N at 60/round is too low for full epistatic coverage if the library is single-residue.** Stage 4 must use **combinatorial libraries (\u22652 simultaneous mutations per variant from R2 onward)** or the AI will plateau in a single-mutation local maximum by R4.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 115,
+      "line": "**Verdict: Low-N is insufficient. Medium-N (60/round) is the minimum, with confirmation re-test (n=5) on top 10/round.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 121,
+      "line": "**Required, codified in the assay SOP before Round 0:**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 123,
+      "line": "1. **WT BaEV-Rless on every plate, every round.** Minimum 6 wells per plate (one per donor \u00d7 2 technical replicates).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 124,
+      "line": "2. **Variant-to-WT pairing is by donor identity, not by plate average.** Each variant's TXN_G0(v) is normalized to WT on the same donor. The fitness equation operationally becomes:",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 125,
+      "line": "   `TXN_G0_norm(v, donor_i) = TXN_G0(v, donor_i) / TXN_G0(WT, donor_i)`",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 127,
+      "line": "3. **Donor identity recorded as a fixed effect** in any regression-style ML training, not absorbed into a ratio.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 128,
+      "line": "4. **Donor rotation:** no single donor used in >2 consecutive rounds; full panel of \u22659 donors over the campaign.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 129,
+      "line": "5. **No \"historical WT\" data.** The blueprint already mandates a Round-0 WT lock-in; that lock-in is the *baseline anchor for power calculations*, not the per-round normalization reference. Per-round normalization uses *that round's* same-donor WT, full stop.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 130,
+      "line": "6. **Producer batch matched:** each variant and its same-donor WT control must be produced in the *same transfection day* in the *same producer batch*. Otherwise producer-lot variance (~1.4\u00d7 across days for BaEV in our experience) confounds the normalization.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 132,
+      "line": "This mandate is the single most important addition to the blueprint. Without it, the kill threshold at R1 is arithmetic theater.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 138,
+      "line": "The current equation penalizes over-integration (`\u03bb_sub \u00b7 max(0, VCN\u22123)\u00b2`) and gates on in silico immunogenicity. **It does not penalize the failure modes that have actually killed HSC gene therapy programs.** Five additions:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 141,
+      "line": "`\u22120.25 \u00b7 log2(Ki67_ratio_v / Ki67_ratio_WT)` in BFP\u207a LT-HSC fraction. From R1.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 142,
+      "line": "*Failure mode prevented:* Graphite Bio-class loss of long-term repopulating HSC due to G0 \u2192 G1 forcing. This is the single most-likely silent killer of the campaign.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 145,
+      "line": "At R3, top 10 variants undergo CFU-GEMM at 14 days; compute myeloid:erythroid:lymphoid ratio in BFP\u207a colonies. Add to fitness:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 146,
+      "line": "`\u22120.10 \u00b7 |log2(myeloid_ratio_v / myeloid_ratio_WT)|`",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 147,
+      "line": "*Failure mode prevented:* myeloid-skewed reconstitution is both an aging signature and a leukemia signature. A variant that selectively transduces myeloid-biased aged HSCs (which exist in young donors as a small subset, ~5\u201315%) will look fine on %BFP\u207a but produce a myeloid-skewed clinical reconstitution. This is the bluebird MDS/AML signal that took Lyfgenia into a clinical hold.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 150,
+      "line": "LTC-IC is too noisy and slow for the inner AL loop (5-week readout, CV 18\u201325%) \u2014 but it can enter as a **per-variant binary safety gate** at R3:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 151,
+      "line": "`G_LTC = 1 if LTC-IC frequency in BFP\u207a \u2265 0.6 \u00d7 LTC-IC in untransduced same-donor; else 0.`",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 152,
+      "line": "Multiplied into the fitness scalar at R3+ for top 20 variants.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 153,
+      "line": "*Failure mode prevented:* variants that destroy long-term repopulating activity while preserving Day-7 surface markers.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 156,
+      "line": "The current penalty `\u03bb \u00b7 max(0, VCN\u22123)\u00b2` allows VCN=3 unpenalized. **FDA's stated preference is VCN \u22642 in the final drug product.** Tighten to:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 157,
+      "line": "`\u03bb_sub \u00b7 max(0, VCN(v) \u2212 2)\u00b2` with `\u03bb_sub = 0.4`.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 158,
+      "line": "A variant at VCN=4 now loses 0.4 \u00b7 4 = 1.6 fitness points \u2014 enough to disqualify any G0 win short of 3.5\u00d7.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 162,
+      "line": "Current `M_immuno` checks NetMHCpan-4.1 against four HLA Class I alleles. Inadequate. Required additions:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 163,
+      "line": "- **Class II:** NetMHCIIpan against DRB1\\*03:01, \\*04:01, \\*07:01, \\*15:01 (covers >80% of US population for CD4 help).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 164,
+      "line": "- **Population coverage:** add HLA-A\\*03:01, \\*11:01, \\*23:01, B\\*35:01, B\\*44:02 to Class I panel (covers Asian, East African, and Hispanic populations relevant to SCD/\u03b2-thal markets).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 165,
+      "line": "- **Threshold:** \u22642 novel strong binders allowed per variant (not zero), but each one in the immunogenicity panel adds `\u22120.05` to fitness. Soft penalty, not gate.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 182,
+      "line": "**Revised primary fitness scalar (R1 onward):**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 198,
+      "line": "- `M_FTO*` = original M_FTO + the high-information-residue constraint (Loophole #6) **from R1**.",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 199,
+      "line": "- `M_immuno*` = expanded HLA panel (Class I + II, broader population coverage) (Safety #5).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 200,
+      "line": "- `G_LTC` = LTC-IC binary gate, applied to top 20 variants at R3 forward (Safety #3).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 201,
+      "line": "- VCN_per_TU dropped from scalar; logged as diagnostic only (Loophole #7).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 202,
+      "line": "- All normalizations are **same-donor, same-producer-batch** (Loophole #5, Control Mandate \u00a73).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 218,
+      "line": "The blueprint cannot proceed to Stage 4 wet-lab execution as written. Required revisions before R0 lock-in:",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 220,
+      "line": "1. **Move Ki-67 activation penalty into primary scalar from R1** (Safety #1).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 221,
+      "line": "2. **Replace %BFP\u207a with min(fraction, absolute count) in the G0 term** (Loophole #2).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 222,
+      "line": "3. **Geometric-mean titer across HCT116 + KG-1a; add MOI-3 sub-saturating G0 term** (Loophole #3).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 223,
+      "line": "4. **Move PRODVIAB to 72 h endpoint with AUC** (Loophole #4).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 224,
+      "line": "5. **Mandate same-donor, same-producer-batch WT pairing; donor as fixed effect; donor rotation** (Loophole #5, Control Mandate).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 225,
+      "line": "6. **Move high-information-residue FTO constraint into M_FTO from R1** (Loophole #6).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 226,
+      "line": "7. **Drop VCN_per_TU from scalar; log as diagnostic** (Loophole #7).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 227,
+      "line": "8. **Add lineage-bias term at R3, LTC-IC gate at R3, tightened VCN cap (>2 not >3), expanded HLA panel including Class II** (Safety Terms 2\u20135).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 228,
+      "line": "9. **n=5 donor confirmation on top 10 variants per round** (Sample Size Verdict).",
+      "classification": "numeric_bullet",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged",
+      "severity": "fail"
+    },
+    {
+      "line_no": 230,
+      "line": "Cost of full implementation: ~$80\u2013120K incremental over the 14-month campaign. Schedule slip: zero. Headcount impact: 0.25 FTE for the donor-pairing operational overhead.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 232,
+      "line": "Cost of *not* implementing: a campaign that produces beautiful Day-7 BFP numbers, fails LTC-IC at R5, fails NSG secondary at R6, and leaves us with composition-of-matter on a variant that activates HSCs into G1 and induces myeloid skew. That is not a platform. That is a $40M lesson in why you don't trust the scalar.",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    },
+    {
+      "line_no": 234,
+      "line": "**Send this back to Stage 3 main for revision. Re-audit before greenlighting Stage 4.**",
+      "classification": "numeric_prose",
+      "tagged": false,
+      "tags": [],
+      "issue": "untagged_prose",
+      "severity": "warn"
+    }
+  ],
+  "tag_breakdown": {}
+}
